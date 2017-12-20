@@ -1,10 +1,12 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<title></title>
+		<title>{{ meta.name }}</title>
+		{% load static %}
+		<link rel="stylesheet" type="text/css" href="{% static 'puzzles/style.css' %}">
 	</head>
 	<body>
-		{{ meta }}
+		<h1 class="title">{{ meta.name }}</h1>
 
 		{% with child_template="puzzles/"|add:meta.templates_folder|add:"/index.html"  %}
 			{% include child_template %}
