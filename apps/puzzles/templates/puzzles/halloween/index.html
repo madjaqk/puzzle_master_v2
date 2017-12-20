@@ -1,0 +1,35 @@
+<p class="flavor"><strong>What technology should I use to build my Halloween-themed website?</strong></p>
+
+<h2>First, work on these puzzles:</h2>
+
+<ul>
+	{% for puzzle in meta.puzzles.all|dictsort:"sort_order" %}
+		<li>{{puzzle.name}}</li>
+	{% endfor %}
+</ul>
+
+<h2>Then, consider this:</h2>
+
+<h4>I'm familiar with front-end technologies, back-end technologies, and everything in between.</h4>
+<table class="meta">
+	<tr>
+		<td></td>
+		<td>_ _</td>
+		<td></td>
+	</tr>
+	<tr>
+		<td></td>
+		<td>_ _ _ _ _</td>
+		<td></td>
+	</tr>
+	<tr>
+		<td></td>
+		<td>_ _ _ _</td>
+		<td></td>
+	</tr>
+	<tr>
+		<td></td>
+		<td>_ _ _ _ _ _ _</td>
+		<td></td>
+	</tr>
+</table>

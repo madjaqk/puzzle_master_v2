@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title></title>
+	</head>
+	<body>
+		{{ meta }}
+
+		{% with child_template="puzzles/"|add:meta.templates_folder|add:"/index.html"  %}
+			{% include child_template %}
+		{% endwith %}
+	</body>
+</html>

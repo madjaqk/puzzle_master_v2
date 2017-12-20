@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Puzzle Master</title>
+	</head>
+	<body>
+		<h1>Metapuzzles</h1>
+
+		<ul>
+			{% for meta in metas|dictsort:"updated_at" %}
+				<li><a href="{% url 'puzzles:show_meta' meta.id %}">{{ meta.name }}</a> -- {{ meta.description}}</li>
+			{% endfor %}
+		</ul>
+	</body>
+</html>
