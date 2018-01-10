@@ -1,0 +1,26 @@
+<script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js"></script>
+
+<p>The answer to this puzzle is a word found in the <a href="https://www.wordgamedictionary.com/sowpods/download/sowpods.txt">SOWPODS word list</a>.  Once you've downloaded a copy of that file, you can create an array containing every entry with the following code:</p>
+
+<pre class="prettyprint"><code>// Node.js
+const fs = require("fs")
+
+words = fs.readFileSync("./sowpods.txt").toString().split("\n")</code></pre>
+
+<pre class="prettyprint"><code># Python
+with open("sowpods.txt") as f:
+words = f.read().split("\n")</code></pre>
+
+<p>The following statements about the answer word are all true.</p>
+
+<ul>
+	<li>If you remove the last three letters, the result is another word on the SOWPODS list.</li>
+	<li>The word contains no double letters.</li>
+	<li>The word matches the regular expression <code class="prettyprint">/^.*(.).*\1.*$/</code> (JS style) or <code class="prettyprint">r"^.*(.).*\1.*$"</code> (Python-style) .</li>
+	<li>The score for playing the word in Scrabble (not counting any blanks or special squares) is 10.</li>
+	<li>The word does not end in a vowel.</li>
+	<li>There is no consecutive block of three letters in the answer that is either in alphabetical order or reverse alphabetical order.  (Another way to say this if ASCII(char2) - ASCII(char1) is positive, ASCII(char3) - ASCII(char2) must be negative.  DUST is allowed under this rule, but STUD isn't, as "STU" is in alphabetical order.)</li>
+	<li>If the word is written in lowercase and the ASCII values of each character are concatenated together to form one very large number, that number mod 9 equals 6.</li>
+	<li>If the word is written in lowercase and the ASCII values of each character are concatenated together to form one very large number, and that number were interpreted as a UPC code, the <a href="https://en.wikipedia.org/wiki/Check_digit#UPC">check digit</a> would have to be 4.</li>
+	<li>The word's first letter and last letter are different.</li>
+</ul>

@@ -7,9 +7,24 @@
 	</head>
 	<body>
 		<h1 class="title">{{ meta.name }}</h1>
+		<form action="{% url 'puzzles:check_answer' %}" method="post">
+			{% csrf_token %}
+			<input type="hidden" name="type" value="meta">
+			<input type="hidden" name="id" value="{{ meta.id }}">
+			<input type="text" name="answer" placeholder="Check answer...">
+			<input type="submit" value="Submit">
+		</form>
 
-		{% with child_template="puzzles/"|add:meta.templates_folder|add:"/index.html"  %}
-			{% include child_template %}
-		{% endwith %}
+		{% if messages %}
+			{% autoescape off %}
+				{% for message in messages %}
+					<p>{{ message }}</p>
+				{% endfor %}
+			{% endautoescape %}
+		{% endif %}
+
+		{% include meta_url %}
+
+		<p><a href="{% url 'puzzles:index' %}">Back</a></p>
 	</body>
 </html>

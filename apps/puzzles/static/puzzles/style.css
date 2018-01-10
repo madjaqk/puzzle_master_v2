@@ -38,6 +38,10 @@ td.yellow {
 	background-color: yellow;
 }
 
+td.lime {
+	background-color: lime;
+}
+
 .pieces_of_8 td {
 	border: none;
 }

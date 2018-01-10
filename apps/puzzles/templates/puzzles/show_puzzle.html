@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>{{ puzzle.name }}</title>
+		{% load static %}
+		<link rel="stylesheet" type="text/css" href="{% static 'puzzles/style.css' %}">
+	</head>
+	<body>
+		<h1 class="title">{{ puzzle.name }}</h1>
+
+		{% if messages %}
+			{% autoescape off %}
+				{% for message in messages %}
+					<p>{{ message }}</p>
+				{% endfor %}
+			{% endautoescape %}
+		{% endif %}
+		
+		<form action="{% url 'puzzles:check_answer' %}" method="post">
+			{% csrf_token %}
+			<input type="hidden" name="type" value="non-meta">
+			<input type="hidden" name="id" value="{{ puzzle.id }}">
+			<input type="text" name="answer" placeholder="Check answer...">
+			<input type="submit" value="Submit">
+		</form>
+
+		{% include puzzle_url %}
+
+		<p><a href="{% url 'puzzles:show_meta' puzzle.metapuzzle.id %}">Back</a></p>
+	</body>
+</html>

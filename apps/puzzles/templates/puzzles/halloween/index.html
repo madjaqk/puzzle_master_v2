@@ -4,7 +4,7 @@
 
 <ul>
 	{% for puzzle in meta.puzzles.all|dictsort:"sort_order" %}
-		<li>{{puzzle.name}}</li>
+		<li><a href="{% url 'puzzles:show_puzzle' puzzle.id %}">{{puzzle.name}}</a></li>
 	{% endfor %}
 </ul>
 
