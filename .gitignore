@@ -24,3 +24,5 @@ local_settings.py
 db.sqlite3
 todo.md
 todo.html
+.env
+__pycache__
