@@ -2,11 +2,7 @@
 
 <h2>First, work on these puzzles:</h2>
 
-<ul>
-	{% for puzzle in meta.puzzles.all|dictsort:"sort_order" %}
-		<li><a href="{% url 'puzzles:show_puzzle' puzzle.id %}">{{puzzle.name}}</a></li>
-	{% endfor %}
-</ul>
+{{ meta.as_ul|safe }}
 
 <h2>Then, consider this:</h2>
 

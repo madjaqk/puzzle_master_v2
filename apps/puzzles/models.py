@@ -3,6 +3,7 @@ import re
 from django.db import models
 from django.db.models.signals import pre_save
 from django.dispatch import receiver
+from django.urls import reverse
 
 
 class Metapuzzle(models.Model):
@@ -16,6 +17,16 @@ class Metapuzzle(models.Model):
 
 	def __str__(self):
 		return f"<Metapuzzle: {self.name}, answer={self.answer}>"
+
+	def as_ul(self):
+		output = ["<ul>"]
+
+		for puzzle in sorted(self.puzzles.all(), key=lambda x: x.sort_order()):
+			output.append(f"<li><a href=\"{reverse('puzzles:show_puzzle', args=[puzzle.id])}\">{puzzle.name}</a></li> ")
+
+		output.append("</ul>")
+		
+		return "\n".join(output)
 
 class Puzzle(models.Model):
 	name = models.CharField(max_length=200)
