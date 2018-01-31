@@ -29,7 +29,7 @@ def check_answer(request):
 	if request.method != "POST":
 		return redirect("puzzles:index")
 
-	# Yes, this uses the magic strings "meta" and "non-meta".  I wanted to write a single check_answer method instead of separate check_puzzle and check_metapuzzle functions, so I needed some way to distinguish what I was looking for; the strings here seemed better than a magic number status code or 
+	# Yes, this uses the magic strings "meta" and "non-meta".  I wanted to write a single check_answer method instead of separate check_puzzle and check_metapuzzle functions, so I needed some way to distinguish what I was looking for; the strings here seemed better than a magic number status code
 	puzzle_types = {
 		"meta": (Metapuzzle, "puzzles:show_meta"),
 		"non-meta": (Puzzle, "puzzles:show_puzzle")
