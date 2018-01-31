@@ -1,0 +1,16 @@
+<style type="text/css">
+	#header {
+		font-style: italic;
+		border-bottom: 1px solid black;
+		padding-bottom: 5px;
+		text-align: right;
+	}
+</style>
+
+<div id="header">
+	{% if user.is_authenticated %}
+		Hello, <strong>{{ user.username }}</strong>! <a href="{% url 'users:logout' %}">Log out?</a>
+	{% else %}
+		<a href="{% url 'users:login_page' %}">Log in</a> to track your solved puzzles!
+	{% endif %}
+</div>

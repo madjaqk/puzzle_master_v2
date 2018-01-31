@@ -1,0 +1,29 @@
+body {
+	background-color: LightBlue;
+}
+
+div.login_page_box {
+	display: inline-block;
+	border: 2px solid black;
+	margin: 25px;
+	padding: 10px;
+	/*minwidth: 40%;*/
+	min-width: 100px;
+}
+
+div.login_page_box h3 {
+	margin: 0px;
+	padding: 0px 0px 1em 0px;
+	text-align: center;
+}
+
+.help {
+	font-size: 0.8em;
+	color: gray;
+}
+
+.error {
+	text-align: center;
+	color: red;
+	font-weight: bold;
+}

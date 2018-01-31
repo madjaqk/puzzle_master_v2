@@ -6,6 +6,8 @@
 		<link rel="stylesheet" type="text/css" href="{% static 'puzzles/style.css' %}">
 	</head>
 	<body>
+		{% include "users/header.html" %}
+		
 		<h1 class="title">{{ meta.name }}</h1>
 		<form action="{% url 'puzzles:check_answer' %}" method="post">
 			{% csrf_token %}

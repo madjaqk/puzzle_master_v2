@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Login/Register</title>
+		{% load static %}
+		<link rel="stylesheet" type="text/css" href="{% static 'users/style.css' %}">
+	</head>
+	<body>
+		{% include "users/header.html" %}
+		{% if messages %}
+			{% for message in messages %}
+				<p {% if message.tags %}class="{{message.tags}}"{% endif %}>{{ message }}</p>
+			{% endfor %}
+		{% endif %}
+		<div class="login_page_box">
+			<h3>Login</h3>
+			<form action="{% url 'users:login' %}" method="POST">
+				{% csrf_token %}
+				<table>
+					{% for field in login_form %}
+						<tr>
+							<td>{{ field.label_tag}}</td>
+							<td>{{ field }} </td>
+						</tr>
+					{% endfor %}
+					<tr>
+						<td></td>
+						<td><input type="submit" value="Log In"></td>
+					</tr>
+				</table>
+			</form>
+		</div>
+		<div class="login_page_box">
+			<h3>Registration</h3>
+			<form action="{% url 'users:register' %}" method="POST">
+				{% csrf_token %}
+				<table>
+					{% for field in register_form %}
+						<tr>
+							<td>{{ field.label_tag}}</td>
+							<td>{{ field }} </td>
+						</tr>
+					{% endfor %}
+					<tr>
+						<td></td>
+						<td><input type="submit" value="Register"></td>
+					</tr>
+				</table>
+			</form>
+		</div>
+		<p><a href="{% url 'puzzles:index' %}">Back to metapuzzles</a></p>
+	</body>
+</html>
