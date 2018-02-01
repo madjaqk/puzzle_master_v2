@@ -75,3 +75,7 @@ img {
 code {
 	background-color: #DDDDDD;
 }
+
+.solved {
+	text-decoration: line-through;
+}

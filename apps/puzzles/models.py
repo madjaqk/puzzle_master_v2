@@ -19,16 +19,6 @@ class Metapuzzle(models.Model):
 	def __str__(self):
 		return f"<Metapuzzle: {self.name}, answer={self.answer}>"
 
-	def as_ul(self):
-		output = ["<ul>"]
-
-		for puzzle in sorted(self.puzzles.all(), key=lambda x: x.sort_order):
-			output.append(f"<li><a href=\"{reverse('puzzles:show_puzzle', args=[puzzle.id])}\">{puzzle.name}</a></li> ")
-
-		output.append("</ul>")
-		
-		return "\n".join(output)
-
 class Puzzle(models.Model):
 	name = models.CharField(max_length=200)
 	short_name = models.CharField(max_length=100)
@@ -51,7 +41,7 @@ class Puzzle(models.Model):
 	def solved_by_user(self, user):
 		if not user.is_authenticated:
 			return False
-		
+
 		return any(answer.correct for answer in PuzzleAnswer.objects.filter(puzzle=self, user=user).reverse())
 
 @receiver(pre_save, sender=Metapuzzle)

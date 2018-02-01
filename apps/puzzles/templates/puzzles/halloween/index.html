@@ -1,8 +1,10 @@
+{% load puzzle_template_filters %}
+
 <p class="flavor">I'm planning on making a spooooooky website for Halloween.  <strong>What technology should I use to build it?</strong></p>
 
 <h2>First, work on these puzzles:</h2>
 
-{{ meta.as_ul|safe }}
+{{ meta|as_ul:user|safe }}
 
 <h2>Then, consider this:</h2>
 
