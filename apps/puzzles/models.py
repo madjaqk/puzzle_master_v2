@@ -48,6 +48,12 @@ class Puzzle(models.Model):
 		else:
 			return re.sub("^(THE|A|AN) ", "", self.name.upper())
 
+	def solved_by_user(self, user):
+		if not user.is_authenticated:
+			return False
+		
+		return any(answer.correct for answer in PuzzleAnswer.objects.filter(puzzle=self, user=user).reverse())
+
 @receiver(pre_save, sender=Metapuzzle)
 @receiver(pre_save, sender=Puzzle)
 def standardize_answer(sender, instance, *args, **kwargs):
@@ -55,7 +61,7 @@ def standardize_answer(sender, instance, *args, **kwargs):
 
 class PuzzleAnswer(models.Model):
 	answer = models.TextField()
-	user = models.ForeignKey(Puzzle, on_delete=models.CASCADE, related_name="puzzle_answers")
+	user = models.ForeignKey(User, on_delete=models.CASCADE, related_name="puzzle_answers")
 	puzzle = models.ForeignKey(Puzzle, on_delete=models.CASCADE, related_name="submitted_answers")
 	created_at = models.DateTimeField(auto_now_add=True)
 	updated_at = models.DateTimeField(auto_now=True)

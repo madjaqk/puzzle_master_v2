@@ -3,11 +3,12 @@
 	<head>
 		<title>{{ puzzle.name }}</title>
 		{% load static %}
+		{% load solved_by %}
 		<link rel="stylesheet" type="text/css" href="{% static 'puzzles/style.css' %}">
 	</head>
 	<body>
 		{% include "users/header.html" %}
-		
+
 		<h1 class="title">{{ puzzle.name }}</h1>
 
 		{% if messages %}
@@ -18,16 +19,35 @@
 			{% endautoescape %}
 		{% endif %}
 		
-		<form action="{% url 'puzzles:check_answer' %}" method="post">
-			{% csrf_token %}
-			<input type="hidden" name="type" value="non-meta">
-			<input type="hidden" name="id" value="{{ puzzle.id }}">
-			<input type="text" name="answer" placeholder="Check answer...">
-			<input type="submit" value="Submit">
-		</form>
+		{% if puzzle|solved_by:user %}
+			<h3>SOLVED -- {{ puzzle.answer }}</h3>
+		{% else %}
+			<form action="{% url 'puzzles:check_answer' %}" method="post">
+				{% csrf_token %}
+				<input type="hidden" name="type" value="non-meta">
+				<input type="hidden" name="id" value="{{ puzzle.id }}">
+				<input type="text" name="answer" placeholder="Check answer...">
+				<input type="submit" value="Submit">
+			</form>
+			</div>
+		{% endif %}
 
 		{% include puzzle_url %}
 
 		<p><a href="{% url 'puzzles:show_meta' puzzle.metapuzzle.id %}">Back</a></p>
+
+		{% if answer_submissions %}
+			<div id="answer_log_div">
+				<h3 id="answer_log_h3">Answer log (click to reveal)</h3>
+				<ul id="answer_log" hidden>
+					{% for answer in answer_submissions %}
+						<li>{{ answer.answer }} -- <strong>{% if answer.correct %} CORRECT {% else %} INCORRECT {% endif %}</strong> </li>
+					{% endfor %}
+				</ul>
+			</div>
+		{% endif %}
+
 	</body>
+
+	<script type="text/javascript" src="{% static 'puzzles/show_answer_log.js' %}"></script>
 </html>
