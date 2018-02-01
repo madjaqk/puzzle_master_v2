@@ -1,5 +1,6 @@
 import re
 
+from django.contrib.auth.models import User
 from django.db import models
 from django.db.models.signals import pre_save
 from django.dispatch import receiver
@@ -21,7 +22,7 @@ class Metapuzzle(models.Model):
 	def as_ul(self):
 		output = ["<ul>"]
 
-		for puzzle in sorted(self.puzzles.all(), key=lambda x: x.sort_order()):
+		for puzzle in sorted(self.puzzles.all(), key=lambda x: x.sort_order):
 			output.append(f"<li><a href=\"{reverse('puzzles:show_puzzle', args=[puzzle.id])}\">{puzzle.name}</a></li> ")
 
 		output.append("</ul>")
@@ -40,6 +41,7 @@ class Puzzle(models.Model):
 	def __str__(self):
 		return f"<Puzzle: {self.name}, answer={self.answer}>"
 
+	@property
 	def sort_order(self):
 		if self.meta_order is not None:
 			return self.meta_order
@@ -50,3 +52,14 @@ class Puzzle(models.Model):
 @receiver(pre_save, sender=Puzzle)
 def standardize_answer(sender, instance, *args, **kwargs):
 	instance.answer = re.sub(r"[^A-Z]", "", instance.answer.upper())
+
+class PuzzleAnswer(models.Model):
+	answer = models.TextField()
+	user = models.ForeignKey(Puzzle, on_delete=models.CASCADE, related_name="puzzle_answers")
+	puzzle = models.ForeignKey(Puzzle, on_delete=models.CASCADE, related_name="submitted_answers")
+	created_at = models.DateTimeField(auto_now_add=True)
+	updated_at = models.DateTimeField(auto_now=True)
+
+	@property
+	def correct(self):
+		return self.answer == self.puzzle.answer
