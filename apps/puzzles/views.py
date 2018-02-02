@@ -3,7 +3,7 @@ import re
 from django.shortcuts import render, redirect, get_object_or_404
 from django.contrib import messages
 
-from .models import Metapuzzle, Puzzle, PuzzleAnswer
+from .models import Metapuzzle, Puzzle, MetaAnswer, PuzzleAnswer
 
 def index(request):
 	# More code here
@@ -15,6 +15,10 @@ def show_meta(request, meta_id):
 		"meta": meta,
 		"meta_url": f"puzzles/{meta.templates_folder}/index.html",
 	}
+
+	if request.user.is_authenticated:
+		context["answer_submissions"] = MetaAnswer.objects.filter(user=request.user, puzzle=meta)
+
 	return render(request, "puzzles/show_meta.html", context)
 
 def show_puzzle(request, puzzle_id):
@@ -26,7 +30,6 @@ def show_puzzle(request, puzzle_id):
 
 	if request.user.is_authenticated:
 		context["answer_submissions"] = PuzzleAnswer.objects.filter(user=request.user, puzzle=puzzle)
-		context["solved"] = any(answer.correct for answer in context["answer_submissions"])
 
 	return render(request, "puzzles/show_puzzle.html", context)
 
@@ -36,18 +39,18 @@ def check_answer(request):
 
 	# Yes, this uses the magic strings "meta" and "non-meta".  I wanted to write a single check_answer method instead of separate check_puzzle and check_metapuzzle functions, so I needed some way to distinguish what I was looking for; the strings here seemed better than a magic number status code.
 	puzzle_types = {
-		"meta": (Metapuzzle, "puzzles:show_meta"),
-		"non-meta": (Puzzle, "puzzles:show_puzzle")
+		"meta": (Metapuzzle, "puzzles:show_meta", MetaAnswer),
+		"non-meta": (Puzzle, "puzzles:show_puzzle", PuzzleAnswer)
 	}
 
-	puzz_type, route = puzzle_types[request.POST["type"]]
+	puzz_type, route, answer_type = puzzle_types[request.POST["type"]]
 
 	puzz = get_object_or_404(puzz_type, id=request.POST["id"])
 
 	submitted_answer = re.sub(r"[^A-Z]", "", request.POST["answer"].upper())
 
-	if request.user.is_authenticated and puzz_type == Puzzle:
-		PuzzleAnswer.objects.create(answer=submitted_answer, user=request.user, puzzle=puzz)
+	if request.user.is_authenticated:
+		answer_type.objects.create(answer=submitted_answer, user=request.user, puzzle=puzz)
 
 	if puzz.answer == submitted_answer:
 		messages.success(request, f"Congratulations!  <b>{submitted_answer}</b> is correct!")
