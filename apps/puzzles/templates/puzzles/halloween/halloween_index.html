@@ -4,7 +4,7 @@
 
 <h2>First, work on these puzzles:</h2>
 
-{{ meta|as_ul:user|safe }}
+{{ puzzle|as_ul:user|safe }}
 
 <h2>Then, consider this:</h2>
 
@@ -31,3 +31,5 @@
 		<td></td>
 	</tr>
 </table>
+
+<p><a href="{% url 'puzzles:index' %}">Back</a></p>

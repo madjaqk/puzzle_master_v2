@@ -12,7 +12,7 @@
 
 		<ul>
 			{% for meta in metas|dictsort:"updated_at" %}
-				<li><a href="{% url 'puzzles:show_meta' meta.id %}">{{ meta.name }}</a> -- {{ meta.description}}</li>
+				<li><a href="{% url 'puzzles:show_puzzle' meta.id %}">{{ meta.name }}</a> -- {{ meta.description}}</li>
 			{% endfor %}
 		</ul>
 	</body>

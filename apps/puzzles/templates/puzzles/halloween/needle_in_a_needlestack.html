@@ -24,3 +24,5 @@ with open("sowpods.txt") as f:
 	<li>If the word is written in lowercase and the ASCII values of each character are concatenated together to form one very large number, and that number were interpreted as a UPC code, the <a href="https://en.wikipedia.org/wiki/Check_digit#UPC">check digit</a> would have to be 4.</li>
 	<li>The word's first letter and last letter are different.</li>
 </ul>
+
+<p><a href="{% url 'puzzles:show_puzzle' puzzle.metapuzzles.first.id %}">Back</a></p>

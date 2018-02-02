@@ -11,7 +11,7 @@ def solved_by(puzzle, user):
 def as_ul(meta, user):
 	output = ["<ul>"]
 
-	for puzzle in sorted(meta.puzzles.all(), key=lambda x: x.sort_order):
+	for puzzle in sorted(meta.feeder_puzzles.all(), key=lambda x: x.sort_order):
 		middle = f"<a href=\"{reverse('puzzles:show_puzzle', args=[puzzle.id])}\">{puzzle.name}</a>"
 		if puzzle.solved_by_user(user):
 			final = f"<li><span class='solved'>{middle}</span> <strong>{puzzle.answer}</strong></li>"

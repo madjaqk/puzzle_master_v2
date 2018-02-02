@@ -7,35 +7,38 @@ from django.dispatch import receiver
 from django.urls import reverse
 
 
-class Metapuzzle(models.Model):
-	name = models.CharField(max_length=50)
-	description = models.TextField()
-	templates_folder = models.CharField(max_length=100)
-	answer = models.TextField()
+# class Metapuzzle(models.Model):
+# 	name = models.CharField(max_length=50)
+# 	description = models.TextField()
+# 	templates_folder = models.CharField(max_length=100)
+# 	answer = models.TextField()
 
-	created_at = models.DateTimeField(auto_now_add=True)
-	updated_at = models.DateTimeField(auto_now=True)
+# 	created_at = models.DateTimeField(auto_now_add=True)
+# 	updated_at = models.DateTimeField(auto_now=True)
 
-	def __str__(self):
-		return f"<Metapuzzle: {self.name}, answer={self.answer}>"
+# 	def __str__(self):
+# 		return f"<Metapuzzle: {self.name}, answer={self.answer}>"
 
-	def solved_by_user(self, user):
-		if not user.is_authenticated:
-			return False
+# 	def solved_by_user(self, user):
+# 		if not user.is_authenticated:
+# 			return False
 
-		return any(answer.correct for answer in MetaAnswer.objects.filter(puzzle=self, user=user).reverse())
+# 		return any(answer.correct for answer in MetaAnswer.objects.filter(puzzle=self, user=user).reverse())
 
 class Puzzle(models.Model):
 	name = models.CharField(max_length=200)
 	short_name = models.CharField(max_length=100)
+	description = models.TextField(null=True, blank=True, default=None)
+	show_on_main_page = models.BooleanField(default=False)
 	answer = models.TextField()
 	meta_order = models.SmallIntegerField(null=True, blank=True, default=None)
-	metapuzzle = models.ForeignKey(Metapuzzle, on_delete=models.CASCADE, related_name="puzzles")
+	metapuzzles = models.ManyToManyField("self", symmetrical=False, related_name="feeder_puzzles", blank=True)
+
 	created_at = models.DateTimeField(auto_now_add=True)
 	updated_at = models.DateTimeField(auto_now=True)
 
 	def __str__(self):
-		return f"<Puzzle: {self.name}, answer={self.answer}>"
+		return f"<Puzzle: {'***' if self.show_on_main_page else ''}{self.name}{'***' if self.show_on_main_page else ''}, answer={self.answer}>"
 
 	@property
 	def sort_order(self):
@@ -50,7 +53,7 @@ class Puzzle(models.Model):
 
 		return any(answer.correct for answer in PuzzleAnswer.objects.filter(puzzle=self, user=user).reverse())
 
-@receiver(pre_save, sender=Metapuzzle)
+# @receiver(pre_save, sender=Metapuzzle)
 @receiver(pre_save, sender=Puzzle)
 def standardize_answer(sender, instance, *args, **kwargs):
 	instance.answer = re.sub(r"[^A-Z]", "", instance.answer.upper())
@@ -66,13 +69,13 @@ class PuzzleAnswer(models.Model):
 	def correct(self):
 		return self.answer == self.puzzle.answer
 
-class MetaAnswer(models.Model):
-	answer = models.TextField()
-	user = models.ForeignKey(User, on_delete=models.CASCADE, related_name="meta_answers")
-	puzzle = models.ForeignKey(Metapuzzle, on_delete=models.CASCADE, related_name="submitted_answers")
-	created_at = models.DateTimeField(auto_now_add=True)
-	updated_at = models.DateTimeField(auto_now=True)
+# class MetaAnswer(models.Model):
+# 	answer = models.TextField()
+# 	user = models.ForeignKey(User, on_delete=models.CASCADE, related_name="meta_answers")
+# 	puzzle = models.ForeignKey(Metapuzzle, on_delete=models.CASCADE, related_name="submitted_answers")
+# 	created_at = models.DateTimeField(auto_now_add=True)
+# 	updated_at = models.DateTimeField(auto_now=True)
 
-	@property
-	def correct(self):
-		return self.answer == self.puzzle.answer
+# 	@property
+# 	def correct(self):
+# 		return self.answer == self.puzzle.answer
