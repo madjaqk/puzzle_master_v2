@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    "social_django",
     "apps.puzzles",
     "apps.users",
 ]
@@ -51,6 +52,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    "social_django.middleware.SocialAuthExceptionMiddleware",
 ]
 
 ROOT_URLCONF = 'puzzle_master_v2.urls'
@@ -66,10 +68,34 @@ TEMPLATES = [
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
+
+                "social_django.context_processors.backends",
+                "social_django.context_processors.login_redirect",
             ],
         },
     },
 ]
+
+AUTHENTICATION_BACKENDS = (
+    "social_core.backends.github.GithubOAuth2",
+    "social_core.backends.twitter.TwitterOAuth",
+    "social_core.backends.facebook.FacebookOAuth2",
+    "django.contrib.auth.backends.ModelBackend",
+)
+
+LOGIN_URL = "users:login_page"
+LOGOUT_URL = 'users:logout'
+LOGIN_REDIRECT_URL = 'puzzles:index'
+
+SOCIAL_AUTH_GITHUB_KEY = config("GITHUB_KEY")
+SOCIAL_AUTH_GITHUB_SECRET = config("GITHUB_SECRET")
+
+SOCIAL_AUTH_TWITTER_KEY = config("TWITTER_KEY")
+SOCIAL_AUTH_TWITTER_SECRET = config("TWITTER_SECRET")
+
+SOCIAL_AUTH_FACEBOOK_KEY = config("FACEBOOK_KEY")
+SOCIAL_AUTH_FACEBOOK_SECRET = config("FACEBOOK_SECRET")
+
 
 WSGI_APPLICATION = 'puzzle_master_v2.wsgi.application'
 

@@ -12,6 +12,7 @@
 				<p {% if message.tags %}class="{{message.tags}}"{% endif %}>{{ message }}</p>
 			{% endfor %}
 		{% endif %}
+
 		<div class="login_page_box">
 			<h3>Login</h3>
 			<form action="{% url 'users:login' %}" method="POST">
@@ -48,6 +49,11 @@
 				</table>
 			</form>
 		</div>
+
+		<p><strong>-- OR --</strong></p>
+		{% for site, pic_url in oauth_buttons %}
+			<p><a href="{% url 'social:begin' site %}"><img src="{% static pic_url %}" width=158></a></p>
+		{% endfor %}
 		<p><a href="{% url 'puzzles:index' %}">Back to metapuzzles</a></p>
 	</body>
 </html>

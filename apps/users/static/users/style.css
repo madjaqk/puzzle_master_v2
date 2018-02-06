@@ -27,3 +27,7 @@ div.login_page_box h3 {
 	color: red;
 	font-weight: bold;
 }
+
+.warning {
+	color: red;
+}
