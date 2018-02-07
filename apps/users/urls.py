@@ -10,4 +10,5 @@ urlpatterns = [
 	path("logout", views.logout_user, name="logout"),
 	path("settings", views.settings, name="settings"),
 	path("password", views.password, name="password"),
+	path("privacy", views.privacy, name="privacy"),
 ]
