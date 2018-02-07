@@ -1,7 +1,7 @@
 {% load static %}
 
 <p class="flavor">This wasn't the type of Python I was expecting...</p>
-<img src="{% static 'puzzles/'|add:puzzle.metapuzzle.templates_folder|add:'/python_grid.png' %}">
+<img src="{% static 'puzzles/halloween/python_grid.png' %}">
 <p>Draw a python (a one-tile wide path) connecting the given circle in the northwest to the circle in the southeast.  The python does not touch itself, not even diagonally.  Additional rules apply to each quadrant.</p>
 <p><strong>Northwest: Minesweeper Python.</strong>  Given numbers show how many python cells are located in the eight neighboring cells.  (Yes, like in the Windows game.)</p>
 <p><strong>Northeast: Graffiti Python.</strong>  The numbers outside the grid show the lengths of blocks of connected non-python cells in that row or column, in order (top down or left-to-right).  If there is more than one non-python block, there must be at least one python cell between them.</p>

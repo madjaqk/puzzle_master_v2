@@ -15,5 +15,15 @@
 				<li><a href="{% url 'puzzles:show_puzzle' meta.id %}">{{ meta.name }}</a> -- {{ meta.description}}</li>
 			{% endfor %}
 		</ul>
+		<h1>So, what's this all about?</h1>
+		<p>On this site, you'll find various puzzles I've written, inspired by things like <a href="http://www.mit.edu/~puzzle/">the MIT Mystery Hunt</a> or <a href="http://www.pandamagazine.com/">P&A Magazine</a>.  In general, these puzzles will have a word or a short phrase as an answer, and if I've done everything correctly, you should know it when you find it.  The puzzles often don't have explicit instructions, because for a certain type of person (including me), recognizing that, say, a set of crossword clues all lead to answers that contain a Greek letter or that a set of trivia questions all can be answered by They Might Be Giants songs is part of the fun.</p>  
+		<p>The puzzles are also grouped into metapuzzles, which work like the regular puzzles but use the answers to the indiviual puzzles in some way.</p>
+		<p>Some decent starting points:</p>
+		<ul><strong>If you like crossword puzzles:</strong> <a href="{% url 'puzzles:show_puzzle' 4 %}">Pieces of 8</a> or <a href="{% url 'puzzles:show_puzzle' 8 %}">Virtual Code</a> (or maybe <a href="{% url 'puzzles:show_puzzle' 7 %}">Something's Missing</a>, but it's a little weirder)</ul>
+		<ul><strong>If you like logic puzzles:</strong> <a href="{% url 'puzzles:show_puzzle' 1 %}">Assignments</a> or <a href="{% url 'puzzles:show_puzzle' 5 %}">Python</a></ul>
+		<ul><strong>If you like programming:</strong> <a href="{% url 'puzzles:show_puzzle' 2 %}">Maximal Path</a> or <a href="{% url 'puzzles:show_puzzle' 3 %}">Needle in a Needlestack</a></ul>
+		<ul><strong>If you like music:</strong> <a href="{% url 'puzzles:show_puzzle' 6 %}">A Representative Sample</a></ul>
+		<p>If you create an account, the site will remember which puzzles you've answered as well as your wrong guesses, if any, but beyond is entirely optional.  You can find the code for this site on <a href="https://github.com/madjaqk/puzzle_master_v2">GitHub</a>.</p>
+		<p><a href="http://www.jackbrounstein.com">Back to JackBrounstein.com</a></p>
 	</body>
 </html>
