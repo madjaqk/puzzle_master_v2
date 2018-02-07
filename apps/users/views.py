@@ -101,3 +101,6 @@ def password(request):
 		form = PasswordForm(request.user)
 
 	return render(request, "users/password.html", {"form": form})
+
+def privacy(request):
+	return render(request, "users/privacy.html")

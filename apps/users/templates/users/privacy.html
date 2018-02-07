@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Privacy Policy</title>
+		{% load static %}
+		<link rel="stylesheet" type="text/css" href="{% static 'users/style.css' %}">
+	</head>
+	<body>
+		{% include "users/header.html" %}
+		<h1>Privacy Policy</h1>
+		<p>This website uses cookies in order to track if the user is signed in.  If you choose to link your account to another login (Facebook, Twitter, or GitHub), some of your publicly available information (such as your name or E-mail address) may be automatically stored as part of your user record in my database, but I do not currently and have no plans to ever do anything with said data.</p>
+		<p><a href="{% url 'puzzles:index' %}">Back to the puzzles</a></p>
+	</body>
+</html>
