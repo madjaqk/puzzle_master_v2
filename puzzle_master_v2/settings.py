@@ -27,7 +27,7 @@ SECRET_KEY = config("SECRET_KEY")
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = config("DEBUG", default=False, cast=bool)
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = config("ALLOWED_HOSTS", cast=lambda x: [host.strip() for host in x.split(",")])
 
 
 # Application definition
@@ -83,7 +83,7 @@ AUTHENTICATION_BACKENDS = (
     "django.contrib.auth.backends.ModelBackend",
 )
 
-LOGIN_URL = "users:login_page"
+LOGIN_URL = 'users:login_page'
 LOGOUT_URL = 'users:logout'
 LOGIN_REDIRECT_URL = 'puzzles:index'
 
