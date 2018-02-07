@@ -32,7 +32,7 @@ class Puzzle(models.Model):
 		if not user.is_authenticated:
 			return False
 
-		return any(answer.correct for answer in PuzzleAnswer.objects.filter(puzzle=self, user=user).reverse())
+		return PuzzleAnswer.objects.filter(puzzle=self, user=user, answer=self.answer).exists()
 
 @receiver(pre_save, sender=Puzzle)
 def standardize_answer(sender, instance, *args, **kwargs):
