@@ -9,10 +9,11 @@ Clone the repo, install requirements, `python manage.py makemigrations` and `pyt
 This project uses [`python-decouple`](https://pypi.python.org/pypi/python-decouple) to hide secret data from version control, so make sure you've created a `.env` file at root level with at the very least a secret key.  (You can find more examples in [the `.env-example` file](.env-example)).  You may also need to comment out some of the OAuth values from `settings.py` (pretty much everything that starts with `SOCIAL_AUTH_`), at least at first.
 
 The most important model is `Puzzle`.  Hopefully, most of the fields are self-explanatory, but some of the more obscure ones:
-* `short_name` is specifically the file name for the template to render to show that puzzle, minus the `.html`.  Note that for organization purposes, templates for the existing set are all in the `templates/puzzles/halloween` directory, so the short names of the associated puzzles also includes the `halloween/`.
-* As of now, `description` only shows on the main page (`index.html`, the `puzzles:index` route), not on the actual puzzle.
+* `short_name` is specifically the file name for the template to render to show that puzzle, minus the `.html`.
 * `meta_order` is used to set the order that all of the puzzles in a given meta will be displayed when using the `as_ul` template tag.  If blank, the puzzles will be sorted alphabetically by title, ignoring articles.
 * `metapuzzles` is a many-to-many, non-symmetric self-join.  Note that this allows a puzzle to belong to multiple metapuzzles (as in the [Emotions round](http://www.mit.edu/~puzzle/2018/full/island/index.html) of the 2018 MIT Mystery Hunt) and for multiple metas to be part of a supermeta.
+
+The `PuzzleSet` model controls what's shown on the main page (`index.html`, the `puzzles:index` route).  Every puzzle set (regardless of how many puzzles, metas, or layers of nested metas there are) should have its own directory in `templates` and `static`, with a `style.css` in the latter.
 
 ## To-Do
 
@@ -37,3 +38,4 @@ This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md
   * The works of Foggy Brume, including [P&A Magazine](http://www.pandamagazine.com/) and his various Puzzle Boats ([1](http://www.pandamagazine.com/island/index.html), [2](http://www.pandamagazine.com/island2/index.php), [3](http://www.pandamagazine.com/island3/index.php), [4](http://www.pandamagazine.com/island4/index.php))
   * [Galactic Puzzle Hunt](https://galacticpuzzlehunt.com/)
   * [Mark Halpin's Labor Day Extravaganzas](http://www.markhalpin.com/puzzles/puzzles.html)
+* Similarly, many thanks to team Duck Soup for their help in testing these puzzles.
