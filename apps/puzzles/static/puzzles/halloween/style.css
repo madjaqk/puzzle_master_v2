@@ -1,0 +1,47 @@
+.assignments td {
+	text-align: right;
+}
+
+.assignments td, .assignments th {
+	width: 75px;
+}
+
+.letters td {
+	width: 25px;
+	height: 25px;
+	text-align: center;
+}
+
+td.black {
+	background-color: black;
+	color: white;
+}
+
+td.yellow {
+	background-color: yellow;
+}
+
+td.lime {
+	background-color: lime;
+}
+
+.pieces_of_8 td {
+	border: none;
+}
+
+.pieces_of_8 td.bordered {
+	border: 1px solid black;
+}
+
+.max_path td {
+	text-align: center;
+	height: 40px;
+	width: 40px;
+}
+
+.meta td {
+	text-align: center;
+	font-size: 1.4em;
+	width: 150px;
+	padding: 10px 0px;
+}
