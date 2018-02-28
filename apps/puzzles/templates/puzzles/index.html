@@ -11,8 +11,8 @@
 		<h1>Metapuzzles</h1>
 
 		<ul>
-			{% for meta in metas|dictsort:"updated_at" %}
-				<li><a href="{% url 'puzzles:show_puzzle' meta.id %}">{{ meta.name }}</a> -- {{ meta.description}}</li>
+			{% for set in sets|dictsort:"updated_at" %}
+				<li><a href="{% url 'puzzles:show_puzzle' set.top_level_puzzle.id %}">{{ set.name }}</a> -- {{ set.description}}</li>
 			{% endfor %}
 		</ul>
 		<h1>So, what's this all about?</h1>

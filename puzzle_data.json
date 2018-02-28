@@ -1,16 +1,27 @@
 [
 {
+    "model": "puzzles.puzzleset",
+    "pk": 1,
+    "fields": {
+        "name": "Halloween Website",
+        "folder": "halloween",
+        "description": "What technology should I use to build my spoooooky website? Originally written for Coding Dojo students in October 2017.",
+        "top_level_puzzle": 9,
+        "created_at": "2018-02-28T01:27:15.150Z",
+        "updated_at": "2018-02-28T01:41:40.113Z"
+    }
+},
+{
     "model": "puzzles.puzzle",
     "pk": 1,
     "fields": {
         "name": "Assignments",
-        "short_name": "halloween/assignments",
-        "description": "",
-        "show_on_main_page": false,
+        "short_name": "assignments",
         "answer": "SCHOOL",
         "meta_order": null,
+        "puzzle_set": 1,
         "created_at": "2017-12-20T03:52:56.999Z",
-        "updated_at": "2018-02-02T06:34:03.352Z",
+        "updated_at": "2018-02-28T01:44:27.717Z",
         "metapuzzles": [
             9
         ]
@@ -21,13 +32,12 @@
     "pk": 2,
     "fields": {
         "name": "Maximal Path",
-        "short_name": "halloween/max_path",
-        "description": "",
-        "show_on_main_page": false,
+        "short_name": "max_path",
         "answer": "SCOTIA",
         "meta_order": null,
+        "puzzle_set": 1,
         "created_at": "2017-12-20T04:00:49.282Z",
-        "updated_at": "2018-02-02T06:34:03.540Z",
+        "updated_at": "2018-02-28T01:44:27.914Z",
         "metapuzzles": [
             9
         ]
@@ -38,13 +48,12 @@
     "pk": 3,
     "fields": {
         "name": "Needle in a Needlestack",
-        "short_name": "halloween/needle_in_a_needlestack",
-        "description": "",
-        "show_on_main_page": false,
+        "short_name": "needle_in_a_needlestack",
         "answer": "GUARDIAN",
         "meta_order": null,
+        "puzzle_set": 1,
         "created_at": "2017-12-20T04:03:49.563Z",
-        "updated_at": "2018-02-02T06:34:03.668Z",
+        "updated_at": "2018-02-28T01:44:28.023Z",
         "metapuzzles": [
             9
         ]
@@ -55,13 +64,12 @@
     "pk": 4,
     "fields": {
         "name": "Pieces of 8",
-        "short_name": "halloween/pieces_of_8_v2",
-        "description": "",
-        "show_on_main_page": false,
+        "short_name": "pieces_of_8_v2",
         "answer": "MANCHU",
         "meta_order": null,
+        "puzzle_set": 1,
         "created_at": "2017-12-20T04:04:11.076Z",
-        "updated_at": "2018-02-02T06:34:03.797Z",
+        "updated_at": "2018-02-28T01:44:28.148Z",
         "metapuzzles": [
             9
         ]
@@ -72,13 +80,12 @@
     "pk": 5,
     "fields": {
         "name": "Python",
-        "short_name": "halloween/python",
-        "description": "",
-        "show_on_main_page": false,
+        "short_name": "python",
         "answer": "SUPER",
         "meta_order": null,
+        "puzzle_set": 1,
         "created_at": "2017-12-20T04:04:25.516Z",
-        "updated_at": "2018-02-02T06:34:03.919Z",
+        "updated_at": "2018-02-28T01:44:28.258Z",
         "metapuzzles": [
             9
         ]
@@ -89,13 +96,12 @@
     "pk": 6,
     "fields": {
         "name": "A Representative Sample",
-        "short_name": "halloween/representative_sample",
-        "description": "",
-        "show_on_main_page": false,
+        "short_name": "representative_sample",
         "answer": "DUST",
         "meta_order": null,
+        "puzzle_set": 1,
         "created_at": "2017-12-20T04:05:03.735Z",
-        "updated_at": "2018-02-02T06:34:04.055Z",
+        "updated_at": "2018-02-28T01:44:28.396Z",
         "metapuzzles": [
             9
         ]
@@ -106,13 +112,12 @@
     "pk": 7,
     "fields": {
         "name": "Something's Missing",
-        "short_name": "halloween/somethings_missing",
-        "description": "",
-        "show_on_main_page": false,
+        "short_name": "somethings_missing",
         "answer": "SHAQ",
         "meta_order": null,
+        "puzzle_set": 1,
         "created_at": "2017-12-20T04:05:26.177Z",
-        "updated_at": "2018-02-02T06:34:04.186Z",
+        "updated_at": "2018-02-28T01:44:28.551Z",
         "metapuzzles": [
             9
         ]
@@ -123,13 +128,12 @@
     "pk": 8,
     "fields": {
         "name": "Virtual Code",
-        "short_name": "halloween/virtual_code",
-        "description": "",
-        "show_on_main_page": false,
+        "short_name": "virtual_code",
         "answer": "COUNTRY",
         "meta_order": null,
+        "puzzle_set": 1,
         "created_at": "2017-12-20T04:05:46.834Z",
-        "updated_at": "2018-02-02T06:34:04.312Z",
+        "updated_at": "2018-02-28T01:42:01.590Z",
         "metapuzzles": [
             9
         ]
@@ -140,15 +144,13 @@
     "pk": 9,
     "fields": {
         "name": "Halloween Website",
-        "short_name": "halloween/halloween_index",
-        "description": "What technology should I use to build my spoooooky website?  Originally written for Coding Dojo students in October 2017.",
-        "show_on_main_page": true,
+        "short_name": "halloween_index",
         "answer": "FANGULAR",
         "meta_order": null,
+        "puzzle_set": 1,
         "created_at": "2018-02-02T06:15:58.808Z",
-        "updated_at": "2018-02-02T06:34:04.456Z",
+        "updated_at": "2018-02-28T01:41:54.908Z",
         "metapuzzles": []
     }
 }
 ]
-

@@ -3,16 +3,17 @@ import re
 from django.shortcuts import render, redirect, get_object_or_404
 from django.contrib import messages
 
-from .models import Puzzle, PuzzleAnswer
+from .models import Puzzle, PuzzleAnswer, PuzzleSet
 
 def index(request):
-	return render(request, "puzzles/index.html", {"metas": Puzzle.objects.filter(show_on_main_page=True)})
+	return render(request, "puzzles/index.html", {"sets": PuzzleSet.objects.all()})
 
 def show_puzzle(request, puzzle_id):
 	puzzle = get_object_or_404(Puzzle, id=puzzle_id)
 	context = {
 		"puzzle": puzzle,
-		"puzzle_url": f"puzzles/{puzzle.short_name}.html",
+		"puzzle_url": f"puzzles/{puzzle.puzzle_set.folder}/{puzzle.short_name}.html",
+		"stylesheet": f"puzzles/{puzzle.puzzle_set.folder}/style.css",
 	}
 
 	if request.user.is_authenticated:
