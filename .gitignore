@@ -27,4 +27,5 @@ todo.html
 .env
 __pycache__
 django_env
+secret_data.json
 /static
