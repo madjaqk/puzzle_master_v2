@@ -1,0 +1,14 @@
+{% load static %}
+
+<div class="whos_that">
+	<p><img src="{% static 'puzzles/multi_meta/wt_pics/1.png' %}"> - <img src="{% static 'puzzles/multi_meta/wt_pics/2.png' %}"> / <img src="{% static 'puzzles/multi_meta/wt_pics/3.png' %}"></p>
+	<p><img src="{% static 'puzzles/multi_meta/wt_pics/4.png' %}"> + <img src="{% static 'puzzles/multi_meta/wt_pics/5.png' %}"> - <img src="{% static 'puzzles/multi_meta/wt_pics/6.png' %}"></p>
+	<p><img src="{% static 'puzzles/multi_meta/wt_pics/7.png' %}"> * <img src="{% static 'puzzles/multi_meta/wt_pics/8.png' %}"> - <img src="{% static 'puzzles/multi_meta/wt_pics/9.png' %}"></p>
+	<p><img src="{% static 'puzzles/multi_meta/wt_pics/10.png' %}"> + <img src="{% static 'puzzles/multi_meta/wt_pics/11.png' %}"> - <img src="{% static 'puzzles/multi_meta/wt_pics/12.png' %}"></p>
+	<p><img src="{% static 'puzzles/multi_meta/wt_pics/13.png' %}"> + <img src="{% static 'puzzles/multi_meta/wt_pics/14.png' %}"> + <img src="{% static 'puzzles/multi_meta/wt_pics/15.png' %}"> </p>
+	<p><img src="{% static 'puzzles/multi_meta/wt_pics/16.png' %}"> * ( <img src="{% static 'puzzles/multi_meta/wt_pics/17.png' %}"> - <img src="{% static 'puzzles/multi_meta/wt_pics/18.png' %}"> )</p>
+	<p><img src="{% static 'puzzles/multi_meta/wt_pics/19.png' %}"> - <img src="{% static 'puzzles/multi_meta/wt_pics/20.png' %}"> / <img src="{% static 'puzzles/multi_meta/wt_pics/21.png' %}"></p>
+	<p><img src="{% static 'puzzles/multi_meta/wt_pics/22.png' %}"> + <img src="{% static 'puzzles/multi_meta/wt_pics/23.png' %}"> - <img src="{% static 'puzzles/multi_meta/wt_pics/24.png' %}"></p>
+</div>
+
+<p><a href="{% url 'puzzles:show_puzzle' puzzle.puzzle_set.top_level_puzzle.id %}">Back</a></p>

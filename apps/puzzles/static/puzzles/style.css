@@ -19,15 +19,26 @@ table {
 	font-style: italic;
 }
 
-img {
-	display: block;
-	margin: 0 auto;
-}
-
 code {
 	background-color: #DDDDDD;
 }
 
 .solved {
 	text-decoration: line-through;
+}
+
+.thick-top {
+	border-top: 3px solid black;
+}
+
+.thick-bottom {
+	border-bottom: 3px solid black;
+}
+
+.thick-left {
+	border-left: 3px solid black;
+}
+
+.thick-right {
+	border-right: 3px solid black;
 }

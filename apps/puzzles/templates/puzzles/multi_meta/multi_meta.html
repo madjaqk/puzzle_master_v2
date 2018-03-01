@@ -1,0 +1,100 @@
+{% load puzzle_template_filters %}
+
+<p class="flavor">Lines, numbers, words, pictures, puzzles...what could it all mean?</p>
+
+<table class="meta">
+	<tr>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+	</tr>
+	<tr>
+		<td class="border-top"></td>
+		<td></td>
+		<td class="border-top">2</td>
+		<td></td>
+		<td class="border-top">3</td>
+		<td></td>
+		<td class="border-top"></td>
+		<td></td>
+		<td class="border-top">8</td>
+	</tr>
+	<tr>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+	</tr>
+	<tr>
+		<td class="border-top"></td>
+		<td></td>
+		<td class="border-top">11</td>
+		<td></td>
+		<td class="border-top">12</td>
+		<td></td>
+		<td class="border-top">5</td>
+		<td></td>
+		<td class="border-top"></td>
+	</tr>
+	<tr>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+	</tr>
+	<tr>
+		<td class="border-top"></td>
+		<td></td>
+		<td class="border-top">4</td>
+		<td></td>
+		<td class="border-top">9</td>
+		<td></td>
+		<td class="border-top">6</td>
+		<td></td>
+		<td class="border-top"></td>
+	</tr>
+	<tr>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+	</tr>
+	<tr>
+		<td class="border-top"></td>
+		<td></td>
+		<td class="border-top">1</td>
+		<td></td>
+		<td class="border-top"></td>
+		<td></td>
+		<td class="border-top">7</td>
+		<td></td>
+		<td class="border-top">10</td>
+	</tr>
+		<tr>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+	</tr>
+</table>
+
+<table>
+	<tr>
+		{% for feeder in puzzle.feeder_puzzles.all|dictsort:'sort_order' %}
+			<th><a href="{% url 'puzzles:show_puzzle' feeder.id %}">{{feeder.name}}</a></th>
+		{% endfor %}
+	</tr>
+	<tr>
+		{% for feeder in puzzle.feeder_puzzles.all|dictsort:'sort_order' %}
+			<td>{{ feeder|as_ul:user|safe }}</td>
+		{% endfor %}
+	</tr>
+</table>
+
+<p><a href="{% url 'puzzles:index' %}">Back</a></p>

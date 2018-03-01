@@ -29,7 +29,7 @@ class Puzzle(models.Model):
 	updated_at = models.DateTimeField(auto_now=True)
 
 	def __str__(self):
-		return f"<Puzzle: {'***' if self.feeder_puzzles.exists() else ''}{self.name}{'***' if self.feeder_puzzles.exists() else ''}, answer={self.answer}>"
+		return f"<ID: {self.id}, puzzle: {'***' if self.feeder_puzzles.exists() else ''}{self.name}{'***' if self.feeder_puzzles.exists() else ''}, answer: {self.answer}>"
 
 	@property
 	def sort_order(self):

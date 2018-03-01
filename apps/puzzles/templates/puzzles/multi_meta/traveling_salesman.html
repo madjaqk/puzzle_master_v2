@@ -1,0 +1,105 @@
+{% load static %}
+<link rel="stylesheet" type="text/css" href="{% static 'puzzles/multi_meta/salesman.css' %}">
+
+<p>Find the shortest path that starts at the circle in the upper-left, visits every circle exactly once, and ends in the lower-right at the intersection of Vermont Ave and Chestnut Ct.</p>
+
+<div class="svg-bg">
+	<svg viewbox="-5 -5 310 310">
+		<line class="blue" x1="0" y1="0" x2="300" y2="0" />
+		<line class="green" x1="0" y1="100" x2="300" y2="100" />
+		<line class="cyan" x1="0" y1="200" x2="300" y2="200" />
+
+		<line class="red" x1="0" y1="0" x2="0" y2="200" />
+		<line class="brown" x1="100" y1="0" x2="100" y2="200" />
+		<line class="orange" x1="200" y1="0" x2="200" y2="200" />
+		<line class="pink" x1="300" y1="0" x2="300" y2="200" />
+
+		<line class="lime" x1="0" y1="0" x2="200" y2="200" />
+		<line class="gray" x1="100" y1="0" x2="300" y2="200" />
+		<line class="yellow" x1="0" y1="200" x2="100" y2="100" />
+		<line class="magenta" x1="200" y1="100" x2="300" y2="0" />
+
+		<path class="purple" d="M 0 200 A 100 100 0 0 0 100 300" />
+		<line class="purple" x1="100" y1="300" x2="200" y2="300" />
+		<path class="purple" d="M 200 300 A 100 100 0 0 0 300 200" />
+
+		<line class="brown" x1="100" y1="200" x2="150" y2="300" />
+		<line class="orange" x1="200" y1="200" x2="150" y2="300" />
+
+		<circle cx="0" cy="0" r="4" />
+		<circle cx="100" cy="0" r="4" />
+		<circle cx="200" cy="0" r="4" />
+		<circle cx="300" cy="0" r="4" />
+
+		<circle cx="0" cy="100" r="4" />
+		<circle cx="100" cy="100" r="4" />
+		<circle cx="200" cy="100" r="4" />
+		<circle cx="300" cy="100" r="4" />
+
+		<circle cx="0" cy="200" r="4" />
+		<circle cx="100" cy="200" r="4" />
+		<circle cx="200" cy="200" r="4" />
+		<circle cx="300" cy="200" r="4" />
+
+		<circle cx="150" cy="300" r="4" />
+
+		<text x="50" y="15">1</text>
+		<text x="150" y="15">2</text>
+		<text x="250" y="15">4</text>
+
+		<text x="50" y="115">3</text>
+		<text x="150" y="115">4</text>
+		<text x="250" y="115">7</text>
+		<text x="345" y="115">3</text>
+
+		<text x="50" y="195">10</text>
+		<text x="150" y="195">3</text>
+		<text x="250" y="195">7</text>
+
+		<text x="3" y="60">3</text>
+		<text x="3" y="150">6</text>
+
+		<text x="103" y="60">4</text>
+		<text x="103" y="160">2</text>
+		
+		<text x="203" y="50">8</text>
+		<text x="203" y="160">9</text>
+		
+		<text x="290" y="60">2</text>
+		<text x="290" y="150">6</text>
+		
+		<text x="52" y="50">7</text>
+		<text x="152" y="150">7</text>
+
+		<text x="152" y="50">4</text>
+		<text x="253" y="148">5</text>
+
+		<text x="40" y="150">4</text>
+		<text x="240" y="50">1</text>
+
+		<text x="30" y="260">3</text>
+		<text x="265" y="260">7</text>
+
+		<text x="130" y="250">8</text>
+		<text x="185" y="250">8</text>
+	</svg>
+</div>
+
+<h3>Map Reference</h3>
+
+<ul>
+	<li class="blue">Ashton Blvd</li>
+	<li class="green">Clifford Pl</li>
+	<li class="cyan">Chestnut Ct</li>
+	<li class="red">Platinum St</li>
+	<li class="brown">Browning Ln</li>
+	<li class="orange">Hemlock Way</li>
+	<li class="pink">Vermont Ave</li>
+	<li class="lime">Red Cedar Dr</li>
+	<li class="gray">Sycamore Rd</li>
+	<li class="yellow">Forest Xing</li>
+	<li class="magenta">Spruce Terr</li>
+	<li class="purple">Business Lp</li>
+</ul>
+
+<p><a href="{% url 'puzzles:show_puzzle' puzzle.puzzle_set.top_level_puzzle.id %}">Back</a></p>

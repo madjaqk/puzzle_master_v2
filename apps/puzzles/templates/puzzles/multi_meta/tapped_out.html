@@ -1,0 +1,7 @@
+{% load puzzle_template_filters %}
+
+<p class="flavor">Remember to dot your Is and cross your Ts.</p>
+
+{{ "19 15 28 26 27"|puzzle_ids_to_ol:user|safe }}
+
+<p><a href="{% url 'puzzles:show_puzzle' puzzle.puzzle_set.top_level_puzzle.id %}">Back</a></p>

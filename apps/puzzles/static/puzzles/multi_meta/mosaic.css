@@ -1,0 +1,48 @@
+div.pentomino {
+	display: inline-block;
+	vertical-align: top;
+	margin: 10px 20px;
+}
+
+div.pentomino td {
+	border: none;
+	text-align: center;
+	width: 30px;
+	height: 30px;
+}
+
+div.pentomino td.dashed-top {
+	border-top: 1px dashed black;
+}
+
+div.pentomino td.dashed-bottom {
+	border-bottom: 1px dashed black;
+}
+
+div.pentomino td.dashed-left {
+	border-left: 1px dashed black;
+}
+
+div.pentomino td.dashed-right {
+	border-right: 1px dashed black;
+}
+
+div.pentomino td.dashed-all {
+	border: 1px dashed black;
+}
+
+div.pentomino td.solid-top {
+	border-top: 2px solid black;
+}
+
+div.pentomino td.solid-bottom {
+	border-bottom: 2px solid black;
+}
+
+div.pentomino td.solid-left {
+	border-left: 2px solid black;
+}
+
+div.pentomino td.solid-right {
+	border-right: 2px solid black;
+}

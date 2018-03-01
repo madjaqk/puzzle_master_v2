@@ -1,0 +1,74 @@
+{% load static %}
+
+<p class="flavor">With apologies to <a href="http://web.mit.edu/puzzle/www/2013/coinheist.com/get_smart/portals/index.html">Palmer Mebane</a></p>
+
+<table>
+	<tr>
+		<td><img src="{% static 'puzzles/multi_meta/lits.png' %}"></td>
+		<td><img src="{% static 'puzzles/multi_meta/cross_the_streams.png' %}"></td>
+	</tr>
+	<tr>
+		<td><img src="{% static 'puzzles/multi_meta/arrow_snake.png' %}"></td>
+		<td><img src="{% static 'puzzles/multi_meta/statue_park.png' %}"></td>
+	</tr>
+	<tr>
+		<td colspan="2">
+			<table class="portals">
+				<tr>
+					<td>A</td> <td>D</td> <td>D</td> <td>I</td> <td>T</td> <td>I</td> <td>O</td> <td>N</td> <td>A</td> <td>L</td> 
+				</tr>
+				<tr>
+					<td>C</td> <td class="thick-top thick-left">H</td> <td class="thick-top thick-right">A</td> <td>R</td> <td>A</td> <td>C</td> <td>T</td> <td>E</td> <td>R</td> <td>S</td> 
+				</tr>
+				<tr>
+					<td>C</td> <td class="thick-bottom thick-left">A</td> <td class="thick-bottom thick-right">L</td> <td>I</td> <td>F</td> <td>O</td> <td>R</td> <td>N</td> <td>I</td> <td>A</td> 
+				</tr>
+				<tr>
+					<td>J</td> <td>I</td> <td>G</td> <td>G</td> <td>L</td> <td>Y</td> <td>P</td> <td>U</td> <td>F</td> <td>F</td> 
+				</tr>
+				<tr>
+					<td>K</td> <td>E</td> <td>V</td> <td>I</td> <td class="thick-top thick-left">N</td> <td class="thick-top thick-right">B</td> <td>A</td> <td>C</td> <td>O</td> <td>N</td> 
+				</tr>
+				<tr>
+					<td>P</td> <td>O</td> <td>L</td> <td>I</td> <td class="thick-bottom thick-left">T</td> <td class="thick-bottom thick-right">I</td> <td>C</td> <td>I</td> <td>A</td> <td>N</td> 
+				</tr>
+				<tr>
+					<td>S</td> <td>K</td> <td>E</td> <td>P</td> <td>T</td> <td>I</td> <td>C</td> <td>I</td> <td>S</td> <td>M</td> 
+				</tr>
+				<tr>
+					<td>S</td> <td>M</td> <td>A</td> <td>R</td> <td>T</td> <td>P</td> <td>H</td> <td class="thick-top thick-left">O</td> <td class="thick-top thick-right">N</td> <td>E</td> 
+				</tr>
+				<tr>
+					<td>S</td> <td>P</td> <td>I</td> <td>C</td> <td>E</td> <td>G</td> <td>I</td> <td class="thick-bottom thick-left">R</td> <td class="thick-bottom thick-right">L</td> <td>S</td> 
+				</tr>
+				<tr>
+					<td>U</td> <td>M</td> <td>A</td> <td>T</td> <td>H</td> <td>U</td> <td>R</td> <td>M</td> <td>A</td> <td>N</td> 
+				</tr>
+			</table>
+		</td>
+	</tr>
+</table>
+
+<h2>Rules</h2>
+
+<h3>The Portals</h3>
+
+<p>Each of the four puzzles has a specific color (shown in its title) and contains three square sections the colors of the other puzzles.  These are portals which connect the cells in the two puzzles.  On the portal squares, the two puzzles must agree on which squares are shaded and which are not; for instance, if the in the blue grid the top-left square of the green portal is black, then in the green grid the top-left square of the of the blue portal must be black, and <em>vice versa</em>.</p>
+
+<h3>LITS</h3>
+
+<p>Shade in some cells so that each region contains four shaded cells connected by side, forming a tetromino.  Two tetrominoes touching by side cannot be a rotation or reflection of each other.  The shaded cells must all be connected, and there cannot be a 2x2 block of shaded cells.</p>
+
+<h3>Cross the Streams</h3>
+
+<p>Shade in some cells to create a single group of black cells that are all connected to each other through their edges.  There cannot be a 2x2 block of shaded cells.  Numbers to the left/top of the grid represent groups of consecutive black cells, and a clue of "3 1" means that the row or column has three consecutive black cells followed by a single black cell, separated by at least one white cell.  A question mark represents a single number greater than zero; an asterisk represents any number of numbers, including none.</p>
+
+<h3>Arrow Snake</h3>
+
+<p>Shade in some cells to form a "snake", a one-cell wide path that doesn't touch itself, even diagonally.  The first and last cells in the snake are given by the black circles.  Arrows in the grid point in the direction of the nearest shaded cell; in the case of a tie, multiple arrows are given.</p>
+
+<h3>Statue Park</h3>
+
+<p>Place two copies of each of the five tetrominoes in the gird.  Two tetrominoes cannot touch by side and all of the white cells must be connected.  A cell with a black circle must be part of some tetromino, and a cell with a white circle cannot be part of any tetromino.</p>
+
+<p><a href="{% url 'puzzles:show_puzzle' puzzle.puzzle_set.top_level_puzzle.id %}">Back</a></p>

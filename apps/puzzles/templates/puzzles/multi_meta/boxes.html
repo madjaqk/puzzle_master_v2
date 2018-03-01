@@ -1,0 +1,107 @@
+{% load puzzle_template_filters %}
+
+<table class="boxes">
+	<tr>
+		<td class="thick-top thick-left letter">C</td>
+		<td class="thick-top"></td>
+		<td class="thick-top thick-right"></td>
+		<td class="thick-top thick-left"></td>
+		<td class="thick-top number">1</td>
+		<td class="thick-top thick-right"></td>
+		<td class="thick-top thick-left"></td>
+		<td class="thick-top letter">S</td>
+		<td class="thick-top thick-right number">2</td>
+	</tr>
+	<tr>
+		<td class="thick-left"></td>
+		<td class=""></td>
+		<td class="thick-right"></td>
+		<td class="thick-left number">3</td>
+		<td class=""></td>
+		<td class="thick-right"></td>
+		<td class="thick-left"></td>
+		<td class=""></td>
+		<td class="thick-right"></td>
+	</tr>
+	<tr>
+		<td class="thick-bottom thick-left"></td>
+		<td class="thick-bottom"></td>
+		<td class="thick-bottom thick-right"></td>
+		<td class="thick-bottom thick-left"></td>
+		<td class="thick-bottom letter">C</td>
+		<td class="thick-bottom thick-right"></td>
+		<td class="thick-bottom thick-left"></td>
+		<td class="thick-bottom"></td>
+		<td class="thick-bottom thick-right"></td>
+	</tr>
+	<tr>
+		<td class="thick-top thick-left"></td>
+		<td class="thick-top"></td>
+		<td class="thick-top thick-right"></td>
+		<td class="thick-top thick-left"></td>
+		<td class="thick-top"></td>
+		<td class="thick-top thick-right"></td>
+		<td class="thick-top thick-left"></td>
+		<td class="thick-top"></td>
+		<td class="thick-top thick-right"></td>
+	</tr>
+	<tr>
+		<td class="thick-left"></td>
+		<td class=""></td>
+		<td class="thick-right lime-bg"></td>
+		<td class="thick-left lime-bg"></td>
+		<td class="lime-bg"></td>
+		<td class="thick-right lime-bg"></td>
+		<td class="thick-left lime-bg"></td>
+		<td class="number">4</td>
+		<td class="thick-right"></td>
+	</tr>
+	<tr>
+		<td class="thick-bottom thick-left"></td>
+		<td class="thick-bottom letter">T</td>
+		<td class="thick-bottom thick-right"></td>
+		<td class="thick-bottom thick-left"></td>
+		<td class="thick-bottom"></td>
+		<td class="thick-bottom thick-right"></td>
+		<td class="thick-bottom thick-left"></td>
+		<td class="thick-bottom"></td>
+		<td class="thick-bottom thick-right"></td>
+	</tr>
+	<tr>
+		<td class="thick-top thick-left"></td>
+		<td class="thick-top"></td>
+		<td class="thick-top thick-right"></td>
+		<td class="thick-top thick-left letter">F</td>
+		<td class="thick-top"></td>
+		<td class="thick-top thick-right"></td>
+		<td class="thick-top thick-left"></td>
+		<td class="thick-top"></td>
+		<td class="thick-top thick-right"></td>
+	</tr>
+	<tr>
+		<td class="thick-left"></td>
+		<td class="letter">N</td>
+		<td class="thick-right"></td>
+		<td class="thick-left"></td>
+		<td class=""></td>
+		<td class="thick-right"></td>
+		<td class="thick-left"></td>
+		<td class="letter">F</td>
+		<td class="thick-right"></td>
+	</tr>
+	<tr>
+		<td class="thick-bottom thick-left number">5</td>
+		<td class="thick-bottom"></td>
+		<td class="thick-bottom thick-right"></td>
+		<td class="thick-bottom thick-left"></td>
+		<td class="thick-bottom"></td>
+		<td class="thick-bottom thick-right"></td>
+		<td class="thick-bottom thick-left"></td>
+		<td class="thick-bottom"></td>
+		<td class="thick-bottom thick-right"></td>
+	</tr>
+</table>
+
+{{ "22 18 25 23 26"|puzzle_ids_to_ol:user|safe }}
+
+<p><a href="{% url 'puzzles:show_puzzle' puzzle.puzzle_set.top_level_puzzle.id %}">Back</a></p>

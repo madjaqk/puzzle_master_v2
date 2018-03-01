@@ -45,3 +45,8 @@ td.lime {
 	width: 150px;
 	padding: 10px 0px;
 }
+
+img {
+	display: block;
+	margin: 0 auto;
+}

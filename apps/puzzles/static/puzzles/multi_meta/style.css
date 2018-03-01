@@ -1,0 +1,85 @@
+.trigram {
+	font-size: 1.4em;
+	font-weight: bold;
+}
+
+.cryptic td {
+	font-size: 0.8em;
+	height: 30px;
+	width: 30px;
+	vertical-align: top;
+}
+
+.name_puzzle td {
+	height: 50px;
+	width: 50px;
+	padding: 5px;
+}
+
+.name_puzzle p {
+	margin: 0px;
+}
+
+.left {
+	text-align: left;
+}
+
+.center {
+	text-align: center;
+}
+
+.right {
+	text-align: right;
+}
+
+.whos_that p {
+	font-size: 4em;
+	font-weight: bold;
+}
+
+.portals {
+	margin: 20px auto;
+}
+
+.portals td {
+	width: 20px;
+	height: 20px;
+	text-align: center;
+}
+
+.lime-bg {
+	background-color: lime;
+}
+
+.boxes td {
+	width: 30px;
+	height: 30px;
+}
+
+.boxes td.number {
+	vertical-align: top;
+	font-size: 0.8em;
+}
+
+.boxes td.letter {
+	text-align: center;
+	font-size: 1.5em;
+	font-weight: bold;
+}
+
+.meta td {
+	border: none;
+	width: 20px;
+	text-align: center;
+	vertical-align: top;
+	height: 1.5em;
+}
+
+.meta td.border-top {
+	border-top: 1px solid black;
+}
+
+#easy_peasy {
+	display: block;
+	margin: 20px auto;
+}

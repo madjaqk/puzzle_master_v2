@@ -1,0 +1,27 @@
+{% load static %}
+{% load puzzle_template_filters %}
+
+<p>133.322 kg/(m*s<sup>2</sup>)</p>
+<p>900 s</p>
+<p>7.249 m<sup>3</sup></p>
+<p>48,160.936 m<sup>2</sup></p>
+<p>438.912 m</p>
+<p>4.838 Ms</p>
+<p>745.7 kg*m<sup>2</sup>/s<sup>3</sup></p>
+<p>10.058 m</p>
+<p>3.404 m</p>
+<p>14.594 kg</p>
+<p>0.009 m<sup>3</sup></p>
+<p>0.203 m</p>
+<p>300 fm<sup>2</sup></p>
+<p>0.035 m<sup>3</sup></p>
+<p>0.17 kg</p>
+<p>1.192 m<sup>3</sup></p>
+<p>236.588 cm<sup>3</sup></p>
+<p>6.35 kg</p>
+
+{% for i in 1|range:19 %}
+	<a href="{% static 'puzzles/multi_meta/si_pics/'|add:i|add:'.png' %}"><img src="{% static 'puzzles/multi_meta/si_pics/'|add:i|add:'.png' %}" height="100"></a>
+{% endfor %}
+
+<p><a href="{% url 'puzzles:show_puzzle' puzzle.puzzle_set.top_level_puzzle.id %}">Back</a></p>

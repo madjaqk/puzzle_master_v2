@@ -1,0 +1,67 @@
+div.svg-bg {
+	background-color: white;
+	width: 310px;
+	height: 310px;
+}
+
+.blue { 
+	color: blue;
+	stroke: blue;
+}
+.green { 
+	color: green;
+	stroke: green;
+}
+.cyan { 
+	color: cyan;
+	stroke: cyan;
+}
+.red { 
+	color: red;
+	stroke: red;
+}
+.purple { 
+	color: purple;
+	stroke: purple;
+}
+.brown { 
+	color: brown;
+	stroke: brown;
+}
+.orange { 
+	color: orange;
+	stroke: orange;
+}
+.lime { 
+	color: lime;
+	stroke: lime;
+}
+.gray { 
+	color: gray;
+	stroke: gray;
+}
+.yellow { 
+	color: yellow;
+	stroke: yellow;
+}
+.magenta { 
+	color: magenta;
+	stroke: magenta;
+}
+.pink { 
+	color: pink;
+	stroke: pink;
+}
+line {
+	stroke-width: 4;
+	/*stroke: rgb(0,0,0);*/
+}
+circle {
+	stroke: black;
+	fill: black;
+}
+
+path {
+	fill: none;
+	stroke-width: 4;
+}
