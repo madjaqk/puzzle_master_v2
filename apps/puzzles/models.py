@@ -56,7 +56,7 @@ class PuzzleAnswer(models.Model):
 	updated_at = models.DateTimeField(auto_now=True)
 
 	def __str__(self):
-		return f"<User: {self.user}, Answer: {self.answer}, {'CORRECT' if self.correct else 'INCORRECT'}>"
+		return f"<User: {self.user}, Puzzle: {self.puzzle.name}, Answer: {self.answer}, {'CORRECT' if self.correct else 'INCORRECT'}>"
 
 	@property
 	def correct(self):
