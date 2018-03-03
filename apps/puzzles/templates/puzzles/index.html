@@ -23,7 +23,7 @@
 		<ul><strong>If you like logic puzzles:</strong> <a href="{% url 'puzzles:show_puzzle' 1 %}">Assignments</a> or <a href="{% url 'puzzles:show_puzzle' 5 %}">Python</a></ul>
 		<ul><strong>If you like programming:</strong> <a href="{% url 'puzzles:show_puzzle' 2 %}">Maximal Path</a> or <a href="{% url 'puzzles:show_puzzle' 3 %}">Needle in a Needlestack</a></ul>
 		<ul><strong>If you like music:</strong> <a href="{% url 'puzzles:show_puzzle' 6 %}">A Representative Sample</a></ul>
-		<p>If you create an account, the site will remember which puzzles you've answered as well as your wrong guesses, if any, but beyond is entirely optional.  You can find the code for this site on <a href="https://github.com/madjaqk/puzzle_master_v2">GitHub</a>.</p>
+		<p>If you <a href="{% url 'users:login_page' %}">create an account</a>, the site will remember which puzzles you've answered as well as your wrong guesses, if any, but beyond is entirely optional.  You can find the code for this site on <a href="https://github.com/madjaqk/puzzle_master_v2">GitHub</a>.</p>
 		<p><a href="http://www.jackbrounstein.com">Back to JackBrounstein.com</a></p>
 	</body>
 </html>
