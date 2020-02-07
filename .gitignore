@@ -26,6 +26,7 @@ todo.md
 todo.html
 .env
 __pycache__
-django_env
+.venv
+.vscode
 secret_data.json
 /static
