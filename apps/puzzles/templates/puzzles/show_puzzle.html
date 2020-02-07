@@ -19,7 +19,7 @@
 				{% endfor %}
 			{% endautoescape %}
 		{% endif %}
-		
+
 		{% if puzzle|solved_by:user %}
 			<h3>SOLVED -- {{ puzzle.answer }}</h3>
 		{% else %}
@@ -46,6 +46,11 @@
 			</div>
 		{% endif %}
 
+		{% if puzzle.metapuzzles.first %}
+			<p><a href="{% url 'puzzles:show_puzzle' puzzle.metapuzzles.first.id %}">Back</a></p>
+		{% else %}
+			<p><a href="{% url 'puzzles:index' %}">Back</a></p>
+		{% endif %}
 	</body>
 
 	<script type="text/javascript" src="{% static 'puzzles/show_answer_log.js' %}"></script>

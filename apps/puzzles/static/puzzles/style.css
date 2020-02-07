@@ -1,9 +1,10 @@
 .title {
-	text-align: center;	
+	text-align: center;
 }
 
 body {
 	background-color: LightBlue;
+	font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
 td, th {

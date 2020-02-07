@@ -23,5 +23,3 @@
 {% for i in 1|range:19 %}
 	<a href="{% static 'puzzles/multi_meta/si_pics/'|add:i|add:'.png' %}"><img src="{% static 'puzzles/multi_meta/si_pics/'|add:i|add:'.png' %}" height="100"></a>
 {% endfor %}
-
-<p><a href="{% url 'puzzles:show_puzzle' puzzle.puzzle_set.top_level_puzzle.id %}">Back</a></p>

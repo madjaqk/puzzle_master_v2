@@ -1,0 +1,49 @@
+.flavor em {
+    font-style: normal;
+}
+
+div.letter_row {
+    margin-bottom: 1em;
+}
+
+div.letter {
+    min-width: 1em;
+    min-height: 1em;
+    display: inline-block;
+    vertical-align: top;
+}
+
+.bordered {
+    border: 1px solid black;
+}
+
+.highlight {
+    background-color: yellow;
+}
+
+.columns {
+    column-count: 3;
+}
+
+.little_women {
+    display: inline-block;
+    vertical-align: top;
+    margin: 0 25px;
+    text-align: center;
+}
+
+.little_women h3 {
+    border-bottom: 2px solid black;
+}
+
+.joker td {
+    width: 50px;
+    height: 50px;
+    text-align: center;
+}
+
+.joker th {
+    border: 0;
+    width: 20px;
+    height: 20px;
+}
