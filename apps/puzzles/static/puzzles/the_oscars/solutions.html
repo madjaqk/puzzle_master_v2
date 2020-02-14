@@ -1,0 +1,801 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>The Oscars -- Solutions</title>
+        <style>
+            body {
+                background-color: LightBlue;
+                font-family: Georgia, 'Times New Roman', Times, serif;
+            }
+
+            div.puzzle {
+                border: 5px solid black;
+                margin: 10px;
+                padding: 0 5px;
+            }
+
+            td {
+                text-align: center;
+            }
+
+            div.spoiler {
+                display: none;
+            }
+        </style>
+        <script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
+        <script>
+            $(document).ready(function() {
+                $("button").click(function() {
+                    var target = "#" + $(this).attr("reveals")
+                    $(target).toggle(200)
+                })
+            })
+        </script>
+    </head>
+    <body>
+        <h1>The Oscars -- Solutions</h1>
+        <div class="puzzle">
+            <h3>The Irishman</h3>
+            <h4>Feeder Answers <button reveals="irishman_feeders">Show</button></h4>
+            <div class="spoiler" id="irishman_feeders">
+                <ul>
+                    <li>ANT</li>
+                    <li>COURT</li>
+                    <li>DAMN</li>
+                    <li>ERR</li>
+                    <li>LINENS</li>
+                    <li>OUTRE</li>
+                    <li>PASS AWAY</li>
+                    <li>STONED</li>
+                    <li>STORM</li>
+                    <li>WIRED</li>
+                </ul>
+            </div>
+            <h4>Solution <button reveals="irishman_solution">Show</button></h4>
+            <div class="spoiler" id="irishman_solution">
+                <p>Like Robert De Niro in <em>The Irishman</em>, these answers have undergone de-aging technology--in each, the substring AGE has been replaced with a single letter.  In order of the given blanks:</p>
+                <table>
+                    <tr>
+                        <td>STONED</td>
+                        <td>STONE AGE</td>
+                        <td>D</td>
+                    </tr>
+                    <tr>
+                        <td>OUTRE</td>
+                        <td>OUTRAGE</td>
+                        <td>E</td>
+                    </tr>
+                    <tr>
+                        <td>PASS AWAY</td>
+                        <td>PASSAGEWAY</td>
+                        <td>A</td>
+                    </tr>
+                    <tr>
+                        <td>DAMN</td>
+                        <td>DAMAGE</td>
+                        <td>N</td>
+                    </tr>
+                    <tr>
+                        <td>STORM</td>
+                        <td>STORAGE</td>
+                        <td>M</td>
+                    </tr>
+                    <tr>
+                        <td>ANT</td>
+                        <td>AGENT</td>
+                        <td>A</td>
+                    </tr>
+                    <tr>
+                        <td>ERR</td>
+                        <td>EAGER</td>
+                        <td>R</td>
+                    </tr>
+                    <tr>
+                        <td>COURT</td>
+                        <td>COURAGE</td>
+                        <td>T</td>
+                    </tr>
+                    <tr>
+                        <td>WIRED</td>
+                        <td>WAGERED</td>
+                        <td>I</td>
+                    </tr>
+                    <tr>
+                        <td>LINENS</td>
+                        <td>LINEAGES</td>
+                        <td>N</td>
+                    </tr>
+                </table>
+                <p>The answer is <strong>DEAN MARTIN</strong>.</p>
+            </div>
+        </div>
+        <div class="puzzle">
+            <h3>Marriage Story</h3>
+            <h4>Feeder Answers <button reveals="marriage_story_feeders">Show</button></h4>
+            <div class="spoiler" id="marriage_story_feeders">
+                <ul>
+                    <li>BENNIFER</li>
+                    <li>CENTAUR</li>
+                    <li>CONGRESS</li>
+                    <li>CRYPTIC CLUE</li>
+                    <li>CZECHOSLOVAKIA</li>
+                    <li>GRINDHOUSE</li>
+                    <li>SCREWDRIVER</li>
+                    <li>SEMICOLON</li>
+                    <li>SLOWBRO</li>
+                    <li>TABLE SALT</li>
+                    <li>TEST SOLUTION BEES IGNORE</li>
+                </ul>
+            </div>
+            <h4>Solution <button reveals="marriage_story_solution">Show</button></h4>
+            <div class="spoiler" id="marriage_story_solution">
+                <p>Each of these answers is something that's made of two pieces or parts joined together or mixed in some way.  Enter their component parts in the blanks and read the highlighted letters.</p>
+                <table>
+                    <tr>
+                        <td>SEMICOLON</td>
+                        <td>COMMA</td>
+                        <td>PERIOD</td>
+                        <td>M</td>
+                        <td>I</td>
+                    </tr>
+                    <tr>
+                        <td>CONGRESS</td>
+                        <td>SENATE</td>
+                        <td>HOUSE OF REPRESENTATIVES</td>
+                        <td>S</td>
+                        <td>T</td>
+                    </tr>
+                    <tr>
+                        <td>CRYPTIC CLUE</td>
+                        <td>DEFINITION</td>
+                        <td>WORDPLAY</td>
+                        <td>E</td>
+                        <td>R</td>
+                    </tr>
+                    <tr>
+                        <td><a href="https://bulbapedia.bulbagarden.net/wiki/Slowbro_(Pok%C3%A9mon)">SLOWBRO</a></td>
+                        <td>SHELLDER</td>
+                        <td>SLOWPOKE</td>
+                        <td>D</td>
+                        <td>E</td>
+                    </tr>
+                    <tr>
+                        <td>CZECHOSLOVAKIA</td>
+                        <td>CZECH REPUBLIC</td>
+                        <td>SLOVAKIA</td>
+                        <td>B</td>
+                        <td>O</td>
+                    </tr>
+                    <tr>
+                        <td><a href="https://en.wikipedia.org/wiki/Grindhouse_(film)">GRINDHOUSE</a></td>
+                        <td>PLANET TERROR</td>
+                        <td>DEATH PROOF</td>
+                        <td>R</td>
+                        <td>A</td>
+                    </tr>
+                    <tr>
+                        <td>CENTAUR</td>
+                        <td>HORSE</td>
+                        <td>MAN</td>
+                        <td>H</td>
+                        <td>N</td>
+                    </tr>
+                    <tr>
+                        <td><a href="https://en.wikipedia.org/wiki/Screwdriver_(cocktail)">SCREWDRIVER</a></td>
+                        <td>ORANGE JUICE</td>
+                        <td>VODKA</td>
+                        <td>A</td>
+                        <td>D</td>
+                    </tr>
+                    <tr>
+                        <td>TEST SOLUTION BEES IGNORE</td>
+                        <td>AVIATION LAWS</td>
+                        <td>TEST SOLUTION PLEASE IGNORE</td>
+                        <td>O</td>
+                        <td>O</td>
+                    </tr>
+                    <tr>
+                        <td>TABLE SALT</td>
+                        <td>CHLORINE</td>
+                        <td>SODIUM</td>
+                        <td>L</td>
+                        <td>M</td>
+                    </tr>
+                    <tr>
+                        <td>BENNIFER</td>
+                        <td>BEN AFFLECK</td>
+                        <td>JENNIFER LOPEZ</td>
+                        <td>A</td>
+                        <td>N</td>
+                    </tr>
+                </table>
+                <p>The indicated letters, reading across in order, spell MISTER DEBORAH NADOOLMAN.  <a href="https://en.wikipedia.org/wiki/Deborah_Nadoolman_Landis">Deborah Nadoolman</a> is a costume designer married to director <strong>JOHN LANDIS</strong>.</p>
+                <p>This meta was a lot of fun to brainstorm, and I think I captured a wide array of different "types" of combinations or partnerships.  Test Solution Bees Ignore is a puzzle solving teams that's well represented on the puzzle Discord I mostly wrote this set for; including them was incredibly indulgent on my part.</p>
+            </div>
+        </div>
+        <div class="puzzle">
+            <h3>Little Women</h3>
+            <h4>Feeder Answers <button reveals="little_women_feeders">Show</button></h4>
+            <div class="spoiler" id="little_women_feeders">
+                <ul>
+                    <li>BITTERN</li>
+                    <li>CHER</li>
+                    <li>GAUNT</li>
+                    <li>MARION</li>
+                    <li>NEEDLER</li>
+                    <li>OUT</li>
+                    <li>PAL</li>
+                </ul>
+            </div>
+            <h4>Solution <button reveals="little_women_solution">Show</button></h4>
+            <div class="spoiler" id="little_women_solution">
+                <p>This meta is all about false feminines and false diminutives--that is, words that transform into other real words when you incorrectly apply a grammatical transformation.  The transformations used are:</p>
+                <ul>
+                    <li>Little: Append -LET (as in BOOK/BOOKLET)</li>
+                    <li>Women: Transform -ER to -ESS (as in SORCERER/SORCERESS) or append -ESS (as in COUNT/COUNTESS)</li>
+                    <li>Both: Append -ETTE (as in BACHLOR/BACHLORETTE or KITCHEN/KITCHENETTE)</li>
+                </ul>
+                <table>
+                    <tr>
+                        <td>OUT</td>
+                        <td>OUTLET</td>
+                    </tr>
+                    <tr>
+                        <td>GAUNT</td>
+                        <td>GAUNTLET</td>
+                    </tr>
+                    <tr>
+                        <td>CHER</td>
+                        <td>CHESS</td>
+                    </tr>
+                    <tr>
+                        <td>NEEDLER</td>
+                        <td>NEEDLESS</td>
+                    </tr>
+                    <tr>
+                        <td>BITTERN</td>
+                        <td>BITTERNESS</td>
+                    </tr>
+                    <tr>
+                        <td>PAL</td>
+                        <td>PALETTE</td>
+                    </tr>
+                    <tr>
+                        <td>MARION</td>
+                        <td>MARIONETTE</td>
+                    </tr>
+                </table>
+                <p>Reading the indicated letters, acrostic-style, gives <strong>MILTON BERLE</strong>.</p>
+                <p>I had a hard time brainstorming answers for this meta, especially after I decided I wanted to make the lengths within each category unique; ideally, each answer would have contributed a single letter to the final answer.  I didn't make any effort into making meta answers thematic, instead just assigning answers based on what letters I could extract, but as a coincidence, Milton Berle was known for performing in a dress, making him somewhat apt for the false feminines meta.</p>
+            </div>
+        </div>
+        <div class="puzzle">
+            <h3>Once Upon A Time In Hollywood</h3>
+            <h4>Feeder Answers <button reveals="hollywood_feeders">Show</button></h4>
+            <div class="spoiler" id="hollywood_feeders">
+                <ul>
+                    <li>BILLY GOAT</li>
+                    <li>BON MOT</li>
+                    <li>CLOTHESPEG</li>
+                    <li>HENRI BECQUEREL</li>
+                    <li>MUGGLE</li>
+                    <li>SLIP OF PAPER</li>
+                    <li>SNEAKIER</li>
+                </ul>
+            </div>
+            <h4>Solution <button reveals="hollywood_solution">Show</button></h4>
+            <div class="spoiler" id="hollywood_solution">
+                <p>Quentin Tarantino is a (widely-rumored) foot fetishist, so this meta's all about removing shoes.  Index by the number of pictures into each unshod answer.</p>
+                <table>
+                    <tr>
+                        <td>BON MOT</td>
+                        <td>BOOT</td>
+                        <td>2</td>
+                        <td>M</td>
+                    </tr>
+                    <tr>
+                        <td>SLIP OF PAPER</td>
+                        <td>SLIPPER</td>
+                        <td>4</td>
+                        <td>A</td>
+                    </tr>
+                    <tr>
+                        <td>MUGGLE</td>
+                        <td>MULE</td>
+                        <td>1</td>
+                        <td>G</td>
+                    </tr>
+                    <tr>
+                        <td>BILLY GOAT</td>
+                        <td>BOAT</td>
+                        <td>5</td>
+                        <td>G</td>
+                    </tr>
+                    <tr>
+                        <td>SNEAKIER</td>
+                        <td>SNEAKER</td>
+                        <td>1</td>
+                        <td>I</td>
+                    </tr>
+                    <tr>
+                        <td>CLOTHESPEG</td>
+                        <td>CLOG</td>
+                        <td>3</td>
+                        <td>E</td>
+                    </tr>
+                    <tr>
+                        <td>HENRI BECQUEREL</td>
+                        <td>HEEL</td>
+                        <td>7</td>
+                        <td>Q</td>
+                    </tr>
+                </table>
+                <p><strong>MAGGIE Q</strong> is the answer.</p>
+                <p>I only know that <a href="https://en.wikipedia.org/wiki/Mule_(shoe)">mule</a> is a type of shoe from other puzzles, but it was one of the first I thought of while writing this.  It turns out that, as far as I could tell in my research, "mule" just means that it doesn't have a back, so many slippers and clogs are also mules, but I think the examples of those I found are unambiguous.  I believe MUGGLE was still the hardest answer in this (otherwise pretty easy) meta to place, so my apologies to anyone who bashed their head against it.</p>
+            </div>
+        </div>
+        <div class="puzzle">
+            <h3>Jojo Rabbit</h3>
+            <h4>Feeder Answers <button reveals="jojo_rabbit_feeders">Show</button></h4>
+            <div class="spoiler" id="jojo_rabbit_feeders">
+                <ul>
+                    <li>BARKIS IS WILLIN</li>
+                    <li>CHEESE SOUFFLE</li>
+                    <li>PAPAL LOOKS</li>
+                    <li>PAPARAZZI</li>
+                    <li>THE SORCERER'S APPRENTICE</li>
+                    <li>THIS IS THE END</li>
+                </ul>
+            </div>
+            <h4>Solution <button reveals="jojo_rabbit_solution">Show</button></h4>
+            <div class="spoiler" id="jojo_rabbit_solution">
+                <p>Much like <em>Jojo Rabbit</em>, these answers all feature a repeated bigram, two letters, than a double letter.  (For the regex-inclined, they match the pattern <code>/.*(..)\1..(.)\2.*/</code>).</p>
+                <table>
+                    <tr>
+                        <td></td>
+                        <td>PAPA</td>
+                        <td>RA</td>
+                        <td>ZZ</td>
+                        <td>I</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>PAPA</td>
+                        <td>LL</td>
+                        <td>OO</td>
+                        <td>KS</td>
+                    </tr>
+                    <tr>
+                        <td>TH</td>
+                        <td>ISIS</td>
+                        <td>TH</td>
+                        <td>EE</td>
+                        <td>ND</td>
+                    </tr>
+                    <tr>
+                        <td>CHE</td>
+                        <td>ESES</td>
+                        <td>OU</td>
+                        <td>FF</td>
+                        <td>LE</td>
+                    </tr>
+                    <tr>
+                        <td>BARK</td>
+                        <td>ISIS</td>
+                        <td>WI</td>
+                        <td>LL</td>
+                        <td>IN</td>
+                    </tr>
+                    <tr>
+                        <td>THESORC</td>
+                        <td>ERER</td>
+                        <td>SA</td>
+                        <td>PP</td>
+                        <td>RENTICE</td>
+                    </tr>
+                </table>
+                <p>The numbers given an ordering for the letters in the central, non-repeated bigram; in order, those give <strong>RAOUL WALSH</strong>.</p>
+                <p>Hoo boy--this meta turned out much more constrained than I expected.  Ideally I would have used both letters from every answer, but it just wasn't possible.  PAPAL LOOKS isn't a real phrase, like, at all, but I really, really needed the two Ls.  I believe some solvers got stuck because they noticed the repeated bigrams but not the double letters; in retrospect, just focusing on those probably would have been better.</p>
+            </div>
+        </div>
+        <div class="puzzle">
+            <h3>Joker</h3>
+            <h4>Feeder Answers <button reveals="joker_feeders">Show</button></h4>
+            <div class="spoiler" id="joker_feeders">
+                <ul>
+                    <li>BASEBALL SCORE</li>
+                    <li>BE BRAVE</li>
+                    <li>BLUE BOOK</li>
+                    <li>BRING CONFLICT</li>
+                    <li>BURN RATE</li>
+                    <li>DANCE FLOOR</li>
+                    <li>FIGHT BACK</li>
+                    <li>FOOT RACE</li>
+                    <li>SAM MCGEE</li>
+                    <li>SPRING BREAK</li>
+                    <li>STRIP MINE</li>
+                    <li>ZEN GARDEN</li>
+                </ul>
+            </div>
+            <h4>Solution <button reveals="joker_solution">Show</button></h4>
+            <div class="spoiler" id="joker_solution">
+                <p>Each two-word answer represents a playing card: One word in every answer can form a two-word phrase with one of the suits ("heart", "club", "diamond", or "spade"), and the other word rhymes with a rank.</p>
+                <table>
+                    <tr>
+                        <td>BASEBALL SCORE</td>
+                        <td>baseball diamond</td>
+                        <td>score/four</td>
+                        <td>Four of Diamonds</td>
+                    </tr>
+                    <tr>
+                        <td>BE BRAVE</td>
+                        <td>Braveheart</td>
+                        <td>be/three</td>
+                        <td>Three of Hearts</td>
+                    </tr>
+                    <tr>
+                        <td>BLUE BOOK</td>
+                        <td>book club</td>
+                        <td>blue/two</td>
+                        <td>Two of Clubs</td>
+                    </tr>
+                    <tr>
+                        <td>BRING CONFLICT</td>
+                        <td>conflict diamond</td>
+                        <td>bring/king</td>
+                        <td>King of Diamonds</td>
+                    </tr>
+                    <tr>
+                        <td>BURN RATE</td>
+                        <td>heartburn</td>
+                        <td>rate/eight</td>
+                        <td>Eight of Hearts</td>
+                    </tr>
+                    <tr>
+                        <td>DANCE FLOOR</td>
+                        <td>dance club</td>
+                        <td>floor/four</td>
+                        <td>Four of Clubs</td>
+                    </tr>
+                    <tr>
+                        <td>FIGHT BACK</td>
+                        <td>Fight Club</td>
+                        <td>back/jack</td>
+                        <td>Jack of Clubs</td>
+                    </tr>
+                    <tr>
+                        <td>FOOT RACE</td>
+                        <td>clubfoot</td>
+                        <td>race/ace</td>
+                        <td>Ace of Clubs</td>
+                    </tr>
+                    <tr>
+                        <td>SAM MCGEE</td>
+                        <td>Sam Spade</td>
+                        <td>McGee/three</td>
+                        <td>Three of Spades</td>
+                    </tr>
+                    <tr>
+                        <td>SPRING BREAK</td>
+                        <td>heartbreak</td>
+                        <td>spring/king</td>
+                        <td>King of Hearts</td>
+                    </tr>
+                    <tr>
+                        <td>STRIP MINE</td>
+                        <td>strip club</td>
+                        <td>mine/nine</td>
+                        <td>Nine of Clubs</td>
+                    </tr>
+                    <tr>
+                        <td>ZEN GARDEN</td>
+                        <td>garden spade</td>
+                        <td>zen/ten</td>
+                        <td>Ten of Spades</td>
+                    </tr>
+                </table>
+                <p>One path through the logic is as follows:</p>
+                <ul>
+                    <li>From rule 1, row 1 must be all clubs.</li>
+                    <li>For rule 5, the only 2 that's available is the 2 of clubs.  The king and ten of clubs aren't available, so this 2 must be adjacent to two non-clubs, which means it must be in row 2, directly beneath the 4 of clubs.</li>
+                    <li>Per rule 3, the column that starts 4C, 2C, ??? can't be C or D, as there's no third card that could cause it to bust, and per rule 4 it can't be B.  Therefore A1 is the 4 of clubs and A2 is the 2 of clubs.</li>
+                    <li>From that, B2 and A3 must be a king and 10, in some order.</li>
+                    <li>Column B must include a ten-point card, so the only way it can total 14 is if B1 is the ace of clubs and B3 is one of the 3s.</li>
+                    <li>C3 must be the other 3.</li>
+                    <li>For column C to bust, C1 and C2 must sum to 19 or 20.  Given the cards available, C2 must be the ten of spades, the king of diamonds, or the king of hearts.</li>
+                    <li>A3, B2, and C2 are 10S, KD, and KH in some order; in order to not violate rule 2, B2 must be 10S.</li>
+                    <li>By process of elimination, D2 and D3 must be the 4 of diamonds and the 8 of hearts, in some order.  By rule 6, D3 must be the 8.</li>
+                    <li>In order for column D to bust with the 8 and the 4, D1 must be a ten-point card, which can only be the jack of clubs.  C1 is thus the 9 of clubs.</li>
+                    <li>Rule 1 forces the rest of the suits.</li>
+                </ul>
+                <p>The final arrangement is thus:</p>
+                <table>
+                    <tr>
+                        <td>Four of clubs/DANCE FLOOR</td>
+                        <td>Ace of clubs/FOOT RACE</td>
+                        <td>Nine of clubs/STRIP MINE</td>
+                        <td>Jack of clubs/FIGHT BACK</td>
+                    </tr>
+                    <tr>
+                        <td>Two of clubs/BLUE BOOK</td>
+                        <td>Ten of spades/ZEN GARDEN</td>
+                        <td>King of hearts/SPRING BREAK</td>
+                        <td>Four of diamonds/BASEBALL SCORE</td>
+                    </tr>
+                    <tr>
+                        <td>King of diamonds/BRING CONFLICT</td>
+                        <td>Three of hearts/BE BRAVE</td>
+                        <td>Three of spades/SAM MCGEE</td>
+                        <td>Eight of hearts/BURN RATE</td>
+                    </tr>
+                </table>
+                <p>Indexing into the answers by the given numbers gives the answer <strong>DONALD GLOVER</strong>.</p>
+                <p>This was probably my favorite meta to write; brainstorming possible answers was a lot of fun, and I was surprised by how many reasonable phrases came out given that when I started it felt so constrained.  Unfortunately, one of those fantastic answers, ZEN GARDEN, proved ambiguous--I've never heard of a "garden club", but they apparently exist.  I also apologize that for BURN RATE and STRIP MINE, both halves can combine with a suit to make a phrase; in both cases only one half rhymes with a card rank, so it's technically unambiguous, but still more of a red herring than I would have liked.</p>
+            </div>
+        </div>
+        <div class="puzzle">
+            <h3>Ford v. Ferrari</h3>
+            <h4>Feeder Answers <button reveals="ford_v_ferrari_feeders">Show</button></h4>
+            <div class="spoiler" id="ford_v_ferrari_feeders">
+                <ul>
+                    <li>BULLDOG</li>
+                    <li>EAGLE</li>
+                    <li>REBEL</li>
+                    <li>TIGER</li>
+                    <li>WOLF</li>
+                </ul>
+            </div>
+            <h4>Solution <button reveals="ford_v_ferrari_solution">Show</button></h4>
+            <div class="spoiler" id="ford_v_ferrari_solution">
+                <p>Each answer refers to a team name used by multiple NCAA Division I schools, which can be entered in the rectangles so that the ellipses can be filled with the name of a rivalry or trophy contested between two schools with those team names; for example, the upper left rectangle is BULLDOG, and the lower left is TIGER, and they're connected by the Deep South's Oldest Rivalry between the Auburn Tigers and the Georgia Bulldogs.  A full list of the teams and rivalries used:</p>
+                <table>
+                    <tr>
+                        <td>Black and Blue Bowl</td>
+                        <td>Memphis Tigers</td>
+                        <td>Southern Miss Golden Eagles</td>
+                    </tr>
+                    <tr>
+                        <td>Deep South's Oldest Rivalry</td>
+                        <td>Auburn Tigers</td>
+                        <td>Georgia Bulldogs</td>
+                    </tr>
+                    <tr>
+                        <td>Egg Bowl</td>
+                        <td>Mississippi State Bulldogs</td>
+                        <td>Ole Miss Rebels</td>
+                    </tr>
+                    <tr>
+                        <td>Fremont Cannon</td>
+                        <td>Nevada Wolf Pack</td>
+                        <td>UNLV Rebels</td>
+                    </tr>
+                    <tr>
+                        <td>Magnolia Bowl</td>
+                        <td>LSU Tigers</td>
+                        <td>Ole Miss Rebels</td>
+                    </tr>
+                    <tr>
+                        <td>Mid-South Rivalry</td>
+                        <td>Memphis Tigers</td>
+                        <td>Ole Miss Rebels</td>
+                    </tr>
+                    <tr>
+                        <td>O'Rourke-McFadden Trophy</td>
+                        <td>Boston College Eagles</td>
+                        <td>Clemson Tigers</td>
+                    </tr>
+                    <tr>
+                        <td>Paint Bucket Bowl</td>
+                        <td>Arkansas State Red Wolves</td>
+                        <td>Memphis Tigers</td>
+                    </tr>
+                    <tr>
+                        <td>Rivalry in Dixie</td>
+                        <td>Louisiana Tech Bulldogs</td>
+                        <td>Southern Miss Golden Eagles</td>
+                    </tr>
+                    <tr>
+                        <td>Textile Bowl</td>
+                        <td>Clemson Tigers</td>
+                        <td>NC State Wolfpack</td>
+                    </tr>
+                    <tr>
+                        <td>Tiger Bowl</td>
+                        <td>Auburn Tigers</td>
+                        <td>LSU Tigers</td>
+                    </tr>
+                </table>
+                <p>The answers were the singular form to avoid distinguishing between the Wolf Pack/Wolfpack/Red Wolves.  In addition, the Red Wolves and Golden Eagles are indicated by part of the respective box being the color.  The final grid:</p>
+                <a href="Ford_v_Ferrari_solution.png"><img src="Ford_v_Ferrari_solution.png" width=800></a>
+                <p>The extracted letters in order give <strong>MING-NA WEN</strong>.</p>
+                <p>Anecdotally, I think this might have been most solvers' last meta, due to a combination of requiring somewhat specific domain knowledge and fiddly research.  My original idea was to use all sports, not just college football--my dream was a graph that connected LAKERS to CELTICS to RANGERS to ASTROS (that being NBA, Scottish football, and MLB), but it turns out most of the storied rivalries from American professional sports don't have names.  Take a page from college football and give wacky names and trophies to your classic showdowns, sports leagues!  I'm afraid that in an actual event, this would be highly, highly backsolvable, which thankfully wasn't a concern here.</p>
+                <p>Other ideas I had for this meta were about Supreme Court cases and more general rivalries, but the former was basically <a href="https://www.mit.edu/~puzzle/2006/metas/washington.html">the Washington round from the 2006 MIT Mystery Hunt</a> and the latter <a href="https://pennypark.fun/puzzle/trainer/solution/">The Trainer from 2020</a>.</p>
+            </div>
+        </div>
+        <div class="puzzle">
+            <h3>1917</h3>
+            <h4>Feeder Answers <button reveals="1917_feeders">Show</button></h4>
+            <div class="spoiler" id="1917_feeders">
+                <ul>
+                    <li>DR. BONHAM'S CASE</li>
+                    <li>FIRST VISION</li>
+                    <li>OBAMA INAUGURATION</li>
+                    <li>SOPHIA NATURALIZATION ACT</li>
+                    <li>THE SINKING OF THE TITANIC</li>
+                </ul>
+            </div>
+            <h4>Solution <button reveals="1917_solution">Show</button></h4>
+            <div class="spoiler" id="1917_solution">
+                <p>Each answer is an event that took place in a specific year, each from a different century.  Arrange chronologically and read the last two digits as A=1, B=2...</p>
+                <table>
+                    <tr>
+                        <td><a href="https://en.wikipedia.org/wiki/Dr._Bonham%27s_Case">DR. BONHAM'S CASE</a></td>
+                        <td>1610</td>
+                        <td>J</td>
+                    </tr>
+                    <tr>
+                        <td><a href="https://en.wikipedia.org/wiki/Sophia_Naturalization_Act_1705">SOPHIA NATURALIZATION ACT</a></td>
+                        <td>1705</td>
+                        <td>E</td>
+                    </tr>
+                    <tr>
+                        <td><a href="https://en.wikipedia.org/wiki/First_Vision">FIRST VISION</a></td>
+                        <td>1820</td>
+                        <td>T</td>
+                    </tr>
+                    <tr>
+                        <td>THE SINKING OF THE TITANIC</td>
+                        <td>1912</td>
+                        <td>L</td>
+                    </tr>
+                    <tr>
+                        <td>OBAMA INAUGURATION</td>
+                        <td>2009</td>
+                        <td>I</td>
+                    </tr>
+                </table>
+                <p><strong>JET LI</strong> is the answer.</p>
+                <p>One of the solvers mentioned that he didn't remember seeing this meta idea before, which seems hard to believe given how straightforward it is.  The only reason I can think of is that you're limited to five or six letters at most, given the paucity of recorded events that far back--SOPHIA NATURALIZATION ACT feels a little obscure to be an answer, but there's not much else for 1705.</p>
+            </div>
+        </div>
+        <div class="puzzle">
+            <h3>Parasite</h3>
+            <h4>Feeder Answers <button reveals="parasite_feeders">Show</button></h4>
+            <div class="spoiler" id="parasite_feeders">
+                <ul>
+                    <li>ARGUMENT</li>
+                    <li>BUDGIE</li>
+                    <li>CATCH-22</li>
+                    <li>DREAMLAND</li>
+                    <li>ESSAY SECTION</li>
+                    <li>FRIEND COMPUTER</li>
+                    <li>GUARD RAIL</li>
+                    <li>HARDENING AGENT</li>
+                    <li>IN OTHER WORDS</li>
+                    <li>JUMPER</li>
+                    <li>KEROSENE</li>
+                </ul>
+            </div>
+            <h4>Solution <button reveals="parasite_solution">Show</button></h4>
+            <div class="spoiler" id="parasite_solution">
+                <p>Each answer clues a word that starts with PARA-.  They also each start with a different letter A to K, which provides an ordering mechanism.</p>
+                <table>
+                    <tr>
+                        <td>ARGUMENT</td>
+                        <td>PARAMETER</td>
+                        <td>T</td>
+                    </tr>
+                    <tr>
+                        <td>BUDGIE</td>
+                        <td>PARAKEET</td>
+                        <td>E</td>
+                    </tr>
+                    <tr>
+                        <td>CATCH-22</td>
+                        <td>PARADOX</td>
+                        <td>R</td>
+                    </tr>
+                    <tr>
+                        <td>DREAMLAND</td>
+                        <td>PARADISE</td>
+                        <td>I</td>
+                    </tr>
+                    <tr>
+                        <td>ESSAY SECTION</td>
+                        <td>PARAGRAPH</td>
+                        <td>H</td>
+                    </tr>
+                    <tr>
+                        <td>FRIEND COMPUTER</td>
+                        <td><a href="https://en.wikipedia.org/wiki/Paranoia_(role-playing_game)">PARANOIA</a></td>
+                        <td>A</td>
+                    </tr>
+                    <tr>
+                        <td>GUARD RAIL</td>
+                        <td>PARAPET</td>
+                        <td>T</td>
+                    </tr>
+                    <tr>
+                        <td>HARDENING AGENT</td>
+                        <td>PARALYTIC</td>
+                        <td>C</td>
+                    </tr>
+                    <tr>
+                        <td>IN OTHER WORDS</td>
+                        <td>PARAPHRASE</td>
+                        <td>H</td>
+                    </tr>
+                    <tr>
+                        <td>JUMPER</td>
+                        <td>PARACHUTE</td>
+                        <td>E</td>
+                    </tr>
+                    <tr>
+                        <td>KEROSENE</td>
+                        <td>PARAFFIN</td>
+                        <td>R</td>
+                    </tr>
+                </table>
+                <p>The indexed letters spell <strong>TERI HATCHER</strong>.</p>
+            </div>
+        </div>
+        <div class="puzzle">
+            <h3>The Oscars</h3>
+            <h4>Solution <button reveals="oscar_solution">Show</button></h4>
+            <div class="spoiler" id="oscar_solution">
+                <p>Each meta answer is an actor or director who made exactly one movie with a NATO phonetic letter (like Oscar) in the title.</p>
+                <table>
+                    <tr>
+                        <td>The Irishman</td>
+                        <td>DEAN MARTIN</td>
+                        <td><em>Rio <strong>Bravo</strong></em></td>
+                    </tr>
+                    <tr>
+                        <td>Marriage Story</td>
+                        <td>JOHN LANDIS</td>
+                        <td><em><strong>Oscar</strong></em></td>
+                    </tr>
+                    <tr>
+                        <td>Little Women</td>
+                        <td>MILTON BERLE</td>
+                        <td><em>The <strong>Oscar</strong></em></td>
+                    </tr>
+                    <tr>
+                        <td>Once Upon A Time In Hollywood</td>
+                        <td>MAGGIE Q</td>
+                        <td><em>New Yor<strong>k I Lo</strong>ve You</em></td>
+                    </tr>
+                    <tr>
+                        <td>Jojo Rabbit</td>
+                        <td>RAOUL WALSH</td>
+                        <td><em>High <strong>Sierra</strong></em></td>
+                    </tr>
+                    <tr>
+                        <td>Joker</td>
+                        <td>DONALD GLOVER</td>
+                        <td><em>Magic <strong>Mike</strong> XXL</em></td>
+                    </tr>
+                    <tr>
+                        <td>Ford V Ferrari</td>
+                        <td>MING-NA WEN</td>
+                        <td><em>Fin<strong>al Fa</strong>ntasy: The Spirits Within</em></td>
+                    </tr>
+                    <tr>
+                        <td>1917</td>
+                        <td>JET LI</td>
+                        <td><em><strong>Romeo</strong> Must Die</em></td>
+                    </tr>
+                    <tr>
+                        <td>Parasite</td>
+                        <td>TERI HATCHER</td>
+                        <td><em><strong>Tango</strong> & Cash</em></td>
+                    </tr>
+                </table>
+                <p>The NATO letters in order give my favorite movie of the year, <strong>BOOKSMART</strong>.</p>
+                <p>Sorry about the Maggie Q and Ming-Na Wen answers; K specifically turned out very hard to indicate with this mechanic (but what was I going to, change my favorite movie?).  I wanted to include <em>The Treasure of the Sierra Madre</em> as one of the movies, but it turns out all Humphrey Bogart, Walter Huston, and John Huston all worked on other movies with phonetic letters in the title (Walter Huston in <em>Yankee Doodle Dandy</em>, the other two on <em>High Sierra</em>).  I hope everyone had as much fun solving as I did writing these!</p>
+            </div>
+        </div>
+        <p><a href="http://puzzles.jackbrounstein.com/puzzle/29">Back</a></p>
+    </body>
+</html>
