@@ -29,4 +29,6 @@ __pycache__
 .venv
 .vscode
 secret_data.json
+secret_data.yaml
+dump_and_load_puzzle_data.py
 /static
