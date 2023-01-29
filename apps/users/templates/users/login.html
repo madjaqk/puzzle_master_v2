@@ -50,7 +50,7 @@
 			</form>
 		</div>
 
-		<p><strong>-- OR --</strong></p>
+		<p><strong>— OR —</strong></p>
 		{% for site, pic_url in oauth_buttons %}
 			<p><a href="{% url 'social:begin' site %}"><img src="{% static pic_url %}" width=158></a></p>
 		{% endfor %}

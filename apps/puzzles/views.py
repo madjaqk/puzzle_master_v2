@@ -1,4 +1,5 @@
 import re
+import unicodedata
 
 from django.shortcuts import render, redirect, get_object_or_404
 from django.contrib import messages
@@ -27,7 +28,11 @@ def check_answer(request):
 
 	puzz = get_object_or_404(Puzzle, id=request.POST["id"])
 
-	submitted_answer = re.sub(r"[^A-Z]", "", request.POST["answer"].upper())
+	# Convert accented characters to ASCII equivalents
+	# This is rough, there's probably a more robust way to do this, but right now there's only one puzzle that could
+	# plausibly have a non-ASCII character in the answer. -- JDB 2023-01-27
+	submitted_answer = unicodedata.normalize("NFKD", request.POST["answer"].upper()).encode("ascii", "ignore").decode("utf-8")
+	submitted_answer = re.sub(r"[^A-Z]", "", submitted_answer)
 
 	if request.user.is_authenticated:
 		PuzzleAnswer.objects.create(answer=submitted_answer, user=request.user, puzzle=puzz)

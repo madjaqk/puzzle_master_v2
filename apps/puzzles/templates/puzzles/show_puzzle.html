@@ -21,7 +21,7 @@
 		{% endif %}
 
 		{% if puzzle|solved_by:user %}
-			<h3>SOLVED -- {{ puzzle.answer }}</h3>
+			<h3>SOLVED — {{ puzzle.answer }}</h3>
 		{% else %}
 			<form action="{% url 'puzzles:check_answer' %}" method="post">
 				{% csrf_token %}

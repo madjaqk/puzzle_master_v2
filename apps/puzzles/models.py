@@ -6,6 +6,11 @@ from django.db.models.signals import pre_save
 from django.dispatch import receiver
 from django.urls import reverse
 
+
+class PuzzleSetManager(models.Manager):
+	def get_by_natural_key(self, name):
+		return self.get(name=name)
+
 class PuzzleSet(models.Model):
 	name = models.CharField(max_length=200)
 	folder = models.CharField(max_length=100)
@@ -14,8 +19,18 @@ class PuzzleSet(models.Model):
 	created_at = models.DateTimeField(auto_now_add=True)
 	updated_at = models.DateTimeField(auto_now=True)
 
+	objects = PuzzleSetManager()
+
 	def __str__(self):
 		return self.name
+
+	def natural_key(self):
+		return (self.name,)
+
+
+class PuzzleManager(models.Manager):
+	def get_by_natural_key(self, short_name):
+		return self.get(short_name=short_name)
 
 class Puzzle(models.Model):
 	name = models.CharField(max_length=200)
@@ -28,8 +43,13 @@ class Puzzle(models.Model):
 	created_at = models.DateTimeField(auto_now_add=True)
 	updated_at = models.DateTimeField(auto_now=True)
 
+	objects = PuzzleManager()
+
 	def __str__(self):
 		return f"<ID: {self.id}, puzzle: {'***' if self.feeder_puzzles.exists() else ''}{self.name}{'***' if self.feeder_puzzles.exists() else ''}, answer: {self.answer}>"
+
+	def natural_key(self):
+		return (self.short_name,)
 
 	@property
 	def sort_order(self):
