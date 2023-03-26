@@ -1,0 +1,1104 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>The Oscars — Solutions</title>
+        <style>
+            body {
+                background-color: LightBlue;
+                font-family: Georgia, 'Times New Roman', Times, serif;
+            }
+
+            div.puzzle {
+                border: 5px solid black;
+                margin: 10px;
+                padding: 0 5px;
+            }
+
+            td {
+                text-align: center;
+            }
+
+            div.spoiler {
+                display: none;
+            }
+
+            div.letter_row {
+                margin-bottom: 1em;
+            }
+
+            div.letter {
+                min-width: 1.5em;
+                min-height: 1.5em;
+                display: inline-block;
+                vertical-align: top;
+                text-align: center;
+            }
+
+            .bordered {
+                border: 1px solid black;
+            }
+
+            .highlight {
+                background-color: yellow;
+            }
+
+            .everything_everywhere_all_at_once {
+                display: inline-block;
+                vertical-align: top;
+                margin: 0 25px;
+                text-align: center;
+            }
+
+            .everything_everywhere_all_at_once h2 {
+                border-bottom: 2px solid black;
+                font-size: 1.25em;
+            }
+        </style>
+        <script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
+        <script>
+            $(document).ready(function() {
+                $("button").click(function() {
+                    var target = "#" + $(this).attr("reveals")
+                    $(target).toggle(200)
+                })
+            })
+        </script>
+    </head>
+    <body>
+        <h1>The Oscars — Solutions</h1>
+        <div class="puzzle">
+            <h3>Tár</h3>
+            <h4>Feeder Answers <button reveals="tar_feeders">Show</button></h4>
+            <div class="spoiler" id="tar_feeders">
+                <ul>
+                    <li>ACE OF SPADES</li>
+                    <li>FEAR AND TREMBLING</li>
+                    <li>FIFTEENTH BIRTHDAY</li>
+                    <li>ICE CREAM</li>
+                    <li>NICE BOY</li>
+                    <li>NIKKI AND PAULO</li>
+                    <li>TE REO</li>
+                    <li>YAMOUSSOUKRO</li>
+                </ul>
+            </div>
+            <h4>Solution <button reveals="tar_solution">Show</button></h4>
+            <div class="spoiler" id="tar_solution">
+                <p>Every answer clues a word or phrase with a diacritical mark:</p>
+                <table>
+                    <tr>
+                        <td>ACE OF SPADES</td>
+                        <td>MOTÖRHEAD</td>
+                    </tr>
+                    <tr>
+                        <td>FEAR AND TREMBLING</td>
+                        <td>SØREN KIERKEGAARD</td>
+                    </tr>
+                    <tr>
+                        <td>FIFTEENTH BIRTHDAY</td>
+                        <td>QUINCEAÑERA</td>
+                    </tr>
+                    <tr>
+                        <td>ICE CREAM</td>
+                        <td>Á LA MODE</td>
+                    </tr>
+                    <tr>
+                        <td>NICE BOY</td>
+                        <td>GARÇON</td>
+                    </tr>
+                    <tr>
+                        <td>NIKKI AND PAULO</td>
+                        <td>EXPOSÉ</td>
+                    </tr>
+                    <tr>
+                        <td>TE REO</td>
+                        <td>MĀORI</td>
+                    </tr>
+                    <tr>
+                        <td>YAMOUSSOUKRO</td>
+                        <td>CÔTE D'IVOIRE</td>
+                    </tr>
+                </table>
+                <p>Read the letters in the given direction before or after the accented character—that is, "À → 1" means to take the character immediately after the Á in Á LA MODE, or L.  This spells out <a href="https://bulbapedia.bulbagarden.net/wiki/Lental">LENTAL REGION GAME</a>, so the answer is <strong>NEW POKÉMON SNAP</strong>.</p>
+                <p>Most of these, I hope, are straightforward, at least after seeing the answer, but EXPOSÉ is the name of the underrated <a href="https://en.wikipedia.org/wiki/Expos%C3%A9_(Lost)">Nikki and Paulo-centric episode of <i>Lost</i></a>, and NICE BOY is the old crossword puzzle trick of secretly meaning the French city of Nice.  ICE CREAM has another plausible answer in HÄAGEN-DAZS, but I really needed the L; this has the unfortunate effect, though, that the clue phrase is pretty difficult to Wheel of Fortune if you haven't made that connection.</p>
+            </div>
+        </div>
+        <div class="puzzle">
+            <h3>Avatar: The Way of Water</h3>
+            <h4>Feeder Answers <button reveals="avatar_feeders">Show</button></h4>
+            <div class="spoiler" id="avatar_feeders">
+                <ul>
+                    <li>KALE BROWNE</li>
+                    <li>KRIPKE MODELS</li>
+                    <li>KURDISH LANGUAGE</li>
+                    <li>MATRIX ONLINE</li>
+                    <li>NARCISS CAMERA</li>
+                    <li>PARTY ANIMAL</li>
+                    <li>RAMSAY BOLTON</li>
+                    <li>VAMPIRE LESTAT</li>
+                    <li>VARIABLE INTAKE</li>
+                </ul>
+            </div>
+            <h4>Solution <button reveals="avatar_solution">Show</button></h4>
+            <div class="spoiler" id="avatar_solution">
+                <p>The labels of the 3x3 grids indicate different avatars of Vishnu (generally by literal translations of the name).  In addition, the first three letters of the first word of each answer match the first three letters of one of the avatars.</p>
+                <table>
+                    <tr>
+                        <th>Dashavatara order</th>
+                        <th>Grid label</th>
+                        <th>Avatar</th>
+                        <th>Answer</th>
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td>FISH</td>
+                        <td>Matsya</td>
+                        <td>MATRIX ONLINE</td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>TURTLE</td>
+                        <td>Kurma</td>
+                        <td>KURDISH LANGUAGE</td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>BOAR</td>
+                        <td>Varaha</td>
+                        <td>VARIABLE INTAKE</td>
+                    </tr>
+                    <tr>
+                        <td>4</td>
+                        <td>LION</td>
+                        <td>Narasimha</td>
+                        <td>NARCISS CAMERA</td>
+                    </tr>
+                    <tr>
+                        <td>5</td>
+                        <td>DWARF</td>
+                        <td>Vamana</td>
+                        <td>VAMPIRE LESTAT</td>
+                    </tr>
+                    <tr>
+                        <td>6</td>
+                        <td>WITH AXE</td>
+                        <td>Parashurama</td>
+                        <td>PARTY ANIMAL</td>
+                    </tr>
+                    <tr>
+                        <td>7</td>
+                        <td>DARK/PLEASING</td>
+                        <td>Rama</td>
+                        <td>RAMSAY BOLTON</td>
+                    </tr>
+                    <tr>
+                        <td>8 or 9*</td>
+                        <td>DARK/ALL-ATTRACTIVE</td>
+                        <td>Krishna</td>
+                        <td>KRIPKE MODELS</td>
+                    </tr>
+                    <tr>
+                        <td>10</td>
+                        <td>WHITE HORSE</td>
+                        <td>Kalki</td>
+                        <td>KALE BROWNE</td>
+                    </tr>
+                </table>
+                <p>* As I understand it, different Hindu traditions disagree on the eighth and ninth avatar of Vishnu, but most include Krishna in one of those positions.</p>
+                <p>The 3x3 grids in can be placed in Dashavatara order to recreate the <a href="https://en.wikipedia.org/wiki/Battleship_(puzzle)">Battleship logic puzzle</a>.  In addition, you can place one letter from the second word of each answer in the non-water cells of its corresponding grid fragment.</p>
+                <img src="solutions/battleship_grid.png" width="400"><img src="solutions/battleship_solution.png" width="400">
+                <p>There's some ambiguity in assigning numbers to the ships in the grid, but the pictured configuration produces a meaningful clue phrase, GAME BLANK ASCENSION, which (combined with the given enumeration) gives the answer <a href="https://en.wikipedia.org/wiki/Ultima_IX:_Ascension"><strong>ULTIMA IX</strong></a> (part of another series with a notable Avatar).</p>
+                <p>I like this meta, but it has some issues that could have been resolved with test-solving: First, the assignment of numbers to ships is <em>almost</em> the given order, so I know a few teams that ended up with a slightly garbled clue phrase.  Second, that clue phrase proved to be somewhat difficult to decipher; the correct game is on the <a href="https://en.wikipedia.org/wiki/Ascension">Wikipedia disambiguation page for "Ascension"</a>, so I thought it would be OK, but just trying to solve it with Google is tough.  My apologies to solvers who stumbled on either roadblock.</p>
+
+            </div>
+        </div>
+        <div class="puzzle">
+            <h3>Triangle of Sadness</h3>
+            <h4>Feeder Answers <button reveals="triangle_of_sadness_feeders">Show</button></h4>
+            <div class="spoiler" id="triangle_of_sadness_feeders">
+                <ul>
+                    <li>AIRSTRIP</li>
+                    <li>DAYTRIPS</li>
+                    <li>STRIVED</li>
+                    <li>TRICYCLES</li>
+                    <li>TRINKET</li>
+                    <li>TRITENESS</li>
+                </ul>
+            </div>
+            <h4>Solution <button reveals="triangle_of_sadness_solution">Show</button></h4>
+            <div class="spoiler" id="triangle_of_sadness_solution">
+                The answers to given crossword clues are:
+                <table>
+                    <tr>
+                        <td><em>Perry Mason</em> title word / <em>Scream</em> actress Campbell</td>
+                        <td>CASE / NEVE</td>
+                    </tr>
+                    <tr>
+                        <td>Metallic sounds</td>
+                        <td>CLANKS</td>
+                    </tr>
+                    <tr>
+                        <td>Independence or Groundhog follower</td>
+                        <td>DAY</td>
+                    </tr>
+                    <tr>
+                        <td>Letter confused with rho</td>
+                        <td>P</td>
+                    </tr>
+                    <tr>
+                        <td>Develop</td>
+                        <td>RIPEN</td>
+                    </tr>
+                    <tr>
+                        <td>Late night host Meyers</td>
+                        <td>SETH</td>
+                    </tr>
+                    <tr>
+                        <td>Ave. alternative</td>
+                        <td>ST</td>
+                    </tr>
+                    <tr>
+                        <td>Agree / Wall part</td>
+                        <td>YES / STUD</td>
+                    </tr>
+                </table>
+                <p>Each can be placed in one row of the given triangular grid.  After that, the feeder answers can be found reading Boggle-style, with TRI replaced by a single letter:</p>
+                <img src="solutions/triangle_of_sadness_solution.png">
+                <table>
+                    <tr>
+                        <td>DAYTRIPS</td>
+                        <td>T</td>
+                    </tr>
+                    <tr>
+                        <td>AIRSTRIP</td>
+                        <td>E</td>
+                    </tr>
+                    <tr>
+                        <td>TRINKET</td>
+                        <td>H</td>
+                    </tr>
+                    <tr>
+                        <td>TRICYCLES</td>
+                        <td>A</td>
+                    </tr>
+                    <tr>
+                        <td>TRITENESS</td>
+                        <td>N</td>
+                    </tr>
+                    <tr>
+                        <td>STRIVED</td>
+                        <td>U</td>
+                    </tr>
+                </table>
+                <p>It's not strictly reading order, but taking the letters in the order suggested by the diagram at the bottom of the page gives the answer <strong>TEHANU</strong>.</p>
+                <p>Oof.  As originally posted, the crossword clues were much more ambiguous (such as "HTML element" for P or "Thing studied" for CASE); my idea was that solvers would use the feeder answers to narrow down those possibilities, but in practice it turned out way too hard.  I'm also sorry for the awkward ordering of letters for the final answer (especially since the answer isn't particularly recognizable); it turns out I'm not a strong enough crossword setter to work fix it.  (As it is, all the feeder answers form cycles in the grid so that <a href="https://www.quinapalus.com/qxw.html">Qxw</a> would have more options when filling the grid.)</p>
+            </div>
+        </div>
+        <div class="puzzle">
+            <h3>All Quiet on the Western Front</h3>
+            <h4>Feeder Answers <button reveals="all_quiet_feeders">Show</button></h4>
+            <div class="spoiler" id="all_quiet_feeders">
+                <ul>
+                    <li>AARON</li>
+                    <li>BACKING UP</li>
+                    <li>CRIMP</li>
+                    <li>DRUNKEN</li>
+                    <li>EYING</li>
+                    <li>FILLINGS</li>
+                    <li>GAVE OFF</li>
+                    <li>HUNT</li>
+                    <li>IED</li>
+                    <li>JIMMY</li>
+                    <li>KOOK</li>
+                    <li>LOWER</li>
+                </ul>
+            </div>
+            <h4>Solution <button reveals="all_quiet_solution">Show</button></h4>
+            <div class="spoiler" id="all_quiet_solution">
+                <p>Every answer can have the first letter replaced with SH to form a new word or phrase.  The replaced letters are unique, A to L, providing an ordering.</p>
+                <table>
+                    <tr>
+                        <th>Answer</th>
+                        <th>SH- word/phrase</th>
+                        <th>Extracted letter</th>
+                        <th>Order</th>
+                    </tr>
+                    <tr>
+                        <td>AARON</td>
+                        <td>SHARON</td>
+                        <td>R</td>
+                        <td>6</td>
+                    </tr>
+                    <tr>
+                        <td>BACKING UP</td>
+                        <td>SHACKING UP</td>
+                        <td>K</td>
+                        <td>5</td>
+                    </tr>
+                    <tr>
+                        <td>CRIMP</td>
+                        <td>SHRIMP</td>
+                        <td>P</td>
+                        <td>4</td>
+                    </tr>
+                    <tr>
+                        <td>DRUNKEN</td>
+                        <td>SHRUNKEN</td>
+                        <td>U</td>
+                        <td>7</td>
+                    </tr>
+                    <tr>
+                        <td>EYING</td>
+                        <td>SHYING</td>
+                        <td>I</td>
+                        <td>10</td>
+                    </tr>
+                    <tr>
+                        <td>FILLINGS</td>
+                        <td>SHILLINGS</td>
+                        <td>S</td>
+                        <td>8</td>
+                    </tr>
+                    <tr>
+                        <td>GAVE OFF</td>
+                        <td>SHAVE OFF</td>
+                        <td>A</td>
+                        <td>2</td>
+                    </tr>
+                    <tr>
+                        <td>HUNT</td>
+                        <td>SHUNT</td>
+                        <td>T</td>
+                        <td>9</td>
+                    </tr>
+                    <tr>
+                        <td>IED</td>
+                        <td>SHED</td>
+                        <td>E</td>
+                        <td>11</td>
+                    </tr>
+                    <tr>
+                        <td>JIMMY</td>
+                        <td>SHIMMY</td>
+                        <td>M</td>
+                        <td>3</td>
+                    </tr>
+                    <tr>
+                        <td>KOOK</td>
+                        <td>SHOOK</td>
+                        <td>K</td>
+                        <td>1</td>
+                    </tr>
+                    <tr>
+                        <td>LOWER</td>
+                        <td>SHOWER</td>
+                        <td>R</td>
+                        <td>12</td>
+                    </tr>
+                </table>
+                <p>Reading the indicated letters in order gives the answer <strong>KAMP KRUSTIER</strong>.</p>
+                <p>I thought this would be one of the tougher metas to spot, but it was the first puzzle solved after this set went live, and one of the first solves for a few other early people.  I was eventually vindicated, though, as its currently one of the least-solved puzzles alongside Triangle of Sadness.  The flavor text in this case was probably more helpful for experienced solvers, as it hints at cryptic crossword wordplay, and maybe old hands would also expect that one of the puzzles would use alphabetical ordering and specifically look for that?</p>
+            </div>
+        </div>
+        <div class="puzzle">
+            <h3>The Banshees of Inisherin</h3>
+            <h4>Feeder Answers <button reveals="banshees_feeders">Show</button></h4>
+            <div class="spoiler" id="banshees_feeders">
+                <ul>
+                    <li>CUBIC PLANE CURVE</li>
+                    <li>FOOLISH CONSISTENCY</li>
+                    <li>LITTLE GUYS WITH BIG GUNS</li>
+                    <li>NATIONAL AIR AND SPACE MUSEUM</li>
+                    <li>REGULAR ROUTINE</li>
+                    <li>SWEENEY TODD</li>
+                    <li>WARREN ZEVON</li>
+                </ul>
+            </div>
+            <h4>Solution <button reveals="banshees_solution">Show</button></h4>
+            <div class="spoiler" id="banshees_solution">
+                <p>Every answer clues a phrase in the form of "(monster) of (something)".  The phrases are of different lengths so can be placed unambiguously in the given blanks.</p>
+                <table>
+                    <tr>
+                        <th>Feeder</th>
+                        <th>Monster phrase</th>
+                        <th>First letter</th>
+                        <th>First order</th>
+                        <th>Second letter</th>
+                        <th>Second order</th>
+                    </tr>
+                    <tr>
+                        <td>FOOLISH CONSISTENCY</td>
+                        <td><a href="https://en.wiktionary.org/wiki/a_foolish_consistency_is_the_hobgoblin_of_little_minds">The HOBGOBLIN of LITTLE MINDS</a></td>
+                        <td>I</td>
+                        <td>5</td>
+                        <td>I</td>
+                        <td>5</td>
+                    </tr>
+                    <tr>
+                        <td>CUBIC PLANE CURVE</td>
+                        <td><a href="https://en.wikipedia.org/wiki/Witch_of_Agnesi">The WITCH of AGNESI</a></td>
+                        <td>H</td>
+                        <td>2</td>
+                        <td>N</td>
+                        <td>6</td>
+                    </tr>
+                    <tr>
+                        <td>REGULAR ROUTINE</td>
+                        <td>CREATURE of HABIT</td>
+                        <td>A</td>
+                        <td>6</td>
+                        <td>T</td>
+                        <td>4</td>
+                    </tr>
+                    <tr>
+                        <td>LITTLE GUYS WITH BIG GUNS</td>
+                        <td><a href="https://en.wikipedia.org/wiki/The_Terror_of_Tiny_Town">The TERROR of TINY TOWN</a></td>
+                        <td>E</td>
+                        <td>3</td>
+                        <td>Y</td>
+                        <td>7</td>
+                    </tr>
+                    <tr>
+                        <td>SWEENEY TODD</td>
+                        <td>The DEMON BARBER of FLEET STREET</td>
+                        <td>D</td>
+                        <td>4</td>
+                        <td>E</td>
+                        <td>2</td>
+                    </tr>
+                    <tr>
+                        <td>WARREN ZEVON</td>
+                        <td><a href="https://youtu.be/qae25976UgA">WEREWOLVES of LONDON</a></td>
+                        <td>L</td>
+                        <td>7</td>
+                        <td>D</td>
+                        <td>1</td>
+                    </tr>
+                    <tr>
+                        <td>NATIONAL AIR AND SPACE MUSEUM</td>
+                        <td><a href="https://youtu.be/ioGn5ZWVTzA">The SPIRIT of ST. LOUIS</a></td>
+                        <td>T</td>
+                        <td>1</td>
+                        <td>S</td>
+                        <td>3</td>
+                    </tr>
+                </table>
+                <p>Reading the extracted letters in the given order gives THE DIAL for letters taken from the first words and DESTINY for letters from the second words.  <strong>THE DIAL OF DESTINY</strong> is the answer.</p>
+                <p>I wanted to write something more thematic to the movie, but unfortunately Mark Halpin already wrote the best possible meta about cutting fingers off a few years ago.</p>
+            </div>
+        </div>
+        <div class="puzzle">
+            <h3>Women Talking</h3>
+            <h4>Feeder Answers <button reveals="women_talking_feeders">Show</button></h4>
+            <div class="spoiler" id="women_talking_feeders">
+                <ul>
+                    <li>ANATOMY</li>
+                    <li>DECEMBER ROMANCE</li>
+                    <li>FEVER</li>
+                    <li>FORWARD</li>
+                    <li>MELODIES</li>
+                    <li>SINGER</li>
+                    <li>THE FARM</li>
+                    <li>THERAPY</li>
+                    <li>YOU JEST</li>
+                </ul>
+            </div>
+            <h4>Solution <button reveals="women_talking_solution">Show</button></h4>
+            <div class="spoiler" id="women_talking_solution">
+                <p>First, identify the women pictured.  A homophone (give or take) of each woman's name can come before one of the answers to form a common phrase.</p>
+                <table>
+                    <tr>
+                        <td><img src="women_talking/fisher.jpg" height="200"></td>
+                        <td>Carrie Fisher</td>
+                        <td>FORWARD</td>
+                        <td>CARRY FORWARD</td>
+                    </tr>
+                    <tr>
+                        <td><img src="women_talking/johansson.jpg" height="200"></td>
+                        <td>Scarlett Johansson</td>
+                        <td>FEVER</td>
+                        <td>SCARLET FEVER</td>
+                    </tr>
+                    <tr>
+                        <td><img src="women_talking/kelly.jpg" height="200"></td>
+                        <td>Grace Kelly</td>
+                        <td>ANATOMY</td>
+                        <td>GRAY'S ANATOMY</td>
+                    </tr>
+                    <tr>
+                        <td><img src="women_talking/king.jpg" height="200"></td>
+                        <td>Carole King</td>
+                        <td>SINGER</td>
+                        <td>CAROL SINGER</td>
+                    </tr>
+                    <tr>
+                        <td><img src="women_talking/maclaine.jpg" height="200"></td>
+                        <td>Shirley MacLaine</td>
+                        <td>YOU JEST</td>
+                        <td>SURELY YOU JEST</td>
+                    </tr>
+                    <tr>
+                        <td><img src="women_talking/midler.jpg" height="200"></td>
+                        <td>Bette Midler</td>
+                        <td>THE FARM</td>
+                        <td>BET THE FARM</td>
+                    </tr>
+                    <tr>
+                        <td><img src="women_talking/smart.jpg" height="200"></td>
+                        <td>Jean Smart</td>
+                        <td>THERAPY</td>
+                        <td>GENE THERAPY</td>
+                    </tr>
+                    <tr>
+                        <td><img src="women_talking/steenburgen.jpg" height="200"></td>
+                        <td>Mary Steenburgen</td>
+                        <td>MELODIES</td>
+                        <td>MERRY MELODIES</td>
+                    </tr>
+                    <tr>
+                        <td><img src="women_talking/whitman.jpg" height="200"></td>
+                        <td>Mae Whitman</td>
+                        <td>DECEMBER ROMANCE</td>
+                        <td>MAY-DECEMBER ROMANCE</td>
+                    </tr>
+                </table>
+                <p>Index into each answer by the number of pictures to get <strong>ANDY HARDY COMES HOME</strong>.</p>
+            </div>
+        </div>
+        <div class="puzzle">
+            <h3>Top Gun: Maverick</h3>
+            <h4>Feeder Answers <button reveals="top_gun_feeders">Show</button></h4>
+            <div class="spoiler" id="top_gun_feeders">
+                <ul>
+                    <li>A CHORUS LINE</li>
+                    <li>BERNOULLI'S LAW</li>
+                    <li>CAULIFLOWER</li>
+                    <li>DIALOGUE</li>
+                    <li>FAIR ENOUGH</li>
+                    <li>GASOLINE PUMP</li>
+                    <li>KEYBOARD MUSIC</li>
+                    <li>LOUIS B. MAYER</li>
+                    <li>LOUNGE LIZARD</li>
+                    <li>WAREHOUSING</li>
+                </ul>
+            </div>
+            <h4>Solution <button reveals="top_gun_solution">Show</button></h4>
+            <div class="spoiler" id="top_gun_solution">
+                <p>Each movie poster is for a film that is, like <em>Top Gun: Maverick</em>, supervocalic—that is, the title includes each vowel exactly once.  The feeder answers are also supervocalic and can be paired with the posters based on the order of vowels.  Use the star ratings to index into the answers.</p>
+                <table>
+                    <tr>
+                        <td><em>Crazy Stupid Love</em></td>
+                        <td>CAULIFLOWER</td>
+                        <td>⭐⭐</td>
+                        <td>A</td>
+                    </tr>
+                    <tr>
+                        <td><em>About Time</em></td>
+                        <td>A CHORUS LINE</td>
+                        <td>⭐⭐⭐⭐⭐</td>
+                        <td>R</td>
+                    </tr>
+                    <tr>
+                        <td><em>Deconstructing Harry</em></td>
+                        <td>BERNOULLI'S LAW</td>
+                        <td>⭐⭐⭐</td>
+                        <td>R</td>
+                    </tr>
+                    <tr>
+                        <td><em>Four Christmases</em></td>
+                        <td>LOUIS B. MAYER</td>
+                        <td>⭐⭐</td>
+                        <td>O</td>
+                    </tr>
+                    <tr>
+                        <td><em>Dangerous Minds</em></td>
+                        <td>WAREHOUSING</td>
+                        <td>⭐</td>
+                        <td>W</td>
+                    </tr>
+                    <tr>
+                        <td><em>The Ghost and Mrs. Muir</em></td>
+                        <td>KEYBOARD MUSIC</td>
+                        <td>⭐⭐⭐⭐⭐</td>
+                        <td>O</td>
+                    </tr>
+                    <tr>
+                        <td><em>Charlie St. Cloud</em></td>
+                        <td>FAIR ENOUGH</td>
+                        <td>⭐</td>
+                        <td>F</td>
+                    </tr>
+                    <tr>
+                        <td><em>Double Impact</em></td>
+                        <td>LOUNGE LIZARD</td>
+                        <td>⭐⭐⭐⭐⭐</td>
+                        <td>G</td>
+                    </tr>
+                    <tr>
+                        <td><em>Mary Poppins Returns</em></td>
+                        <td>GASOLINE PUMP</td>
+                        <td>⭐⭐⭐⭐</td>
+                        <td>O</td>
+                    </tr>
+                    <tr>
+                        <td><em>Dial M For Murder</em></td>
+                        <td>DIALOGUE</td>
+                        <td>⭐</td>
+                        <td>D</td>
+                    </tr>
+                </table>
+                <p><strong>ARROW OF GOD</strong> is the answer.</p>
+            </div>
+        </div>
+        <div class="puzzle">
+            <h3>Elvis</h3>
+            <h4>Feeder Answers <button reveals="elvis_feeders">Show</button></h4>
+            <div class="spoiler" id="elvis_feeders">
+                <ul>
+                    <li>ARTISTRIES</li>
+                    <li>BEATABLE</li>
+                    <li>MAXIMA</li>
+                    <li>RESERVES</li>
+                    <li>SETTLE</li>
+                </ul>
+            </div>
+            <h4>Solution <button reveals="elvis_solution">Show</button></h4>
+            <div class="spoiler" id="elvis_solution">
+                <p>The second half of each answer is an anagram of the first half with one letter changed.</p>
+                <table>
+                    <tr>
+                        <td>X</td>
+                        <td>MAX</td>
+                        <td>IMA</td>
+                        <td>I</td>
+                    </tr>
+                    <tr>
+                        <td>S</td>
+                        <td>SET</td>
+                        <td>TLE</td>
+                        <td>L</td>
+                    </tr>
+                    <tr>
+                        <td>T</td>
+                        <td>BEAT</td>
+                        <td>ABLE</td>
+                        <td>L</td>
+                    </tr>
+                    <tr>
+                        <td>E</td>
+                        <td>RESE</td>
+                        <td>RVES</td>
+                        <td>V</td>
+                    </tr>
+                    <tr>
+                        <td>A</td>
+                        <td>ARTIS</td>
+                        <td>TRIES</td>
+                        <td>E</td>
+                    </tr>
+                </table>
+
+                <p>Putting the letters in each column in the order given gives the answer <strong>TEXASVILLE</strong>.</p>
+                <p>I'm sorry to use six-letter answers that make the pattern hard to spot, but it was hard to find answers fitting this wordplay that also extracted the letters I needed.</p>
+            </div>
+        </div>
+        <div class="puzzle">
+            <h3>Everything Everywhere All at Once</h3>
+            <h4>Feeder Answers <button reveals="everything_everywhere_feeders">Show</button></h4>
+            <div class="spoiler" id="everything_everywhere_feeders">
+                <ul>
+                    <li>BROKEN HEART</li>
+                    <li>DECAYED</li>
+                    <li>ELECTRIC MAYHEM</li>
+                    <li>EPIC GAMES</li>
+                    <li>FREE STATE ARMY</li>
+                    <li>GEM</li>
+                    <li>HOLIER</li>
+                    <li>MOORE</li>
+                    <li>PLAUDIT</li>
+                    <li>ROCKY</li>
+                    <li>SEND</li>
+                    <li>THREE MUSKETEERS</li>
+                </ul>
+            </div>
+            <h4>Solution <button reveals="everything_everywhere_solution">Show</button></h4>
+            <div class="spoiler" id="everything_everywhere_solution">
+                <p>Apply each transformation given to one of the answers.</p>
+                <table>
+                    <tr>
+                        <th>Transformation</th>
+                        <th>Original answer</th>
+                        <th>Transformed</th>
+                        <th>Extracted Letter</th>
+                    </tr>
+                    <tr>
+                        <td>Interpret the answer as cryptic crossword wordplay</td>
+                        <td>BROKEN HEART</td>
+                        <td>EARTH</td>
+                        <td>H</td>
+                    </tr>
+                    <tr>
+                        <td>Remove the antepenultimate letter, then swap the penultimate and final letters</td>
+                        <td>DECAYED</td>
+                        <td>DECADE</td>
+                        <td>A</td>
+                    </tr>
+                    <tr>
+                        <td>Swap the first two letters, then insert a <a href="https://en.wikipedia.org/wiki/New_International_Version">biblical abbreviation</a> between the second and third letter</td>
+                        <td>MOORE</td>
+                        <td>OMNIVORE</td>
+                        <td>V</td>
+                    </tr>
+                    <tr>
+                        <td>Remove the first letter, insert an N into the (new) fourth position, then replace the penultimate letter with a <a href="https://en.wikipedia.org/wiki/Roma_(2018_film)">Best Picture nominee</a> from 2015 or later</td>
+                        <td>PLAUDIT</td>
+                        <td>LAUNDROMAT</td>
+                        <td>A</td>
+                    </tr>
+                    <tr>
+                        <td>Insert a state abbreviation in the exact middle of the answer (coincidentally, the answer already ends in a state abbreviation)</td>
+                        <td>SEND</td>
+                        <td>SECOND</td>
+                        <td>N</td>
+                    </tr>
+                    <tr>
+                        <td>Replace the answer with the word immediately following it in a <a href="https://en.wikipedia.org/wiki/Rocky_Raccoon">Beatles song title</a></td>
+                        <td>ROCKY</td>
+                        <td>RACCOON</td>
+                        <td>A</td>
+                    </tr>
+                    <tr>
+                        <td>Replace the name of a <a href="https://en.wikipedia.org/wiki/Dr._Teeth_and_the_Electric_Mayhem">band</a> with its most famous drummer</td>
+                        <td>ELECTRIC MAYHEM</td>
+                        <td>ANIMAL</td>
+                        <td>N</td>
+                    </tr>
+                    <tr>
+                        <td>Add caramel (or switch from an American trade name to its global equivalent)*</td>
+                        <td>THREE MUSKETEERS</td>
+                        <td>MILKY WAY</td>
+                        <td>I</td>
+                    </tr>
+                    <tr>
+                        <td>Replace a company with (arguably) its <a href="https://en.wikipedia.org/wiki/Fortnite_Battle_Royale">most successful product</a>, the one released in 2017 (and fix the spelling)</td>
+                        <td>EPIC GAMES</td>
+                        <td>FORTNIGHT</td>
+                        <td>G</td>
+                    </tr>
+                    <tr>
+                        <td>Replace an untruth in the answer with the letter U</td>
+                        <td>HOLIER</td>
+                        <td>HOUR</td>
+                        <td>H</td>
+                    </tr>
+                    <tr>
+                        <td>Spell it backwards, then delete every other letter (starting with the first)</td>
+                        <td>FREE STATE ARMY</td>
+                        <td>MATTER</td>
+                        <td>T</td>
+                    </tr>
+                    <tr>
+                        <td>Encode the answer with ROT-14</td>
+                        <td>GEM</td>
+                        <td>USA</td>
+                        <td>S</td>
+                    </tr>
+                </table>
+                <p>* In the US, a Three Musketeers bar is chocolate and nougat and a Milky Way is chocolate, nougat, and caramel.  Internationally, a Milky Way is just chocolate and nougat, and a Mars Bar has chocolate, nougat, and caramel.</p>
+                <p>The transformed answers can be entered into the given grid as so:</p>
+                <div class="everything_everywhere_all_at_once">
+                    <h2>Everything</h2>
+                    <div class="letter_row">
+                        <div class="letter bordered">M</div>
+                        <div class="letter bordered">A</div>
+                        <div class="letter bordered highlight">T</div>
+                        <div class="letter bordered">T</div>
+                        <div class="letter bordered">E</div>
+                        <div class="letter bordered">R</div>
+                    </div>
+                    <div class="letter_row">
+                        <div class="letter bordered">A</div>
+                        <div class="letter bordered highlight">N</div>
+                        <div class="letter bordered">I</div>
+                        <div class="letter bordered">M</div>
+                        <div class="letter bordered">A</div>
+                        <div class="letter bordered">L</div>
+                    </div>
+                    <div class="letter_row">
+                        <div class="letter bordered">O</div>
+                        <div class="letter bordered">M</div>
+                        <div class="letter bordered">N</div>
+                        <div class="letter bordered">I</div>
+                        <div class="letter bordered highlight">V</div>
+                        <div class="letter bordered">O</div>
+                        <div class="letter bordered">R</div>
+                        <div class="letter bordered">E</div>
+                    </div>
+                    <div class="letter_row">
+                        <div class="letter bordered">R</div>
+                        <div class="letter bordered highlight">A</div>
+                        <div class="letter bordered">C</div>
+                        <div class="letter bordered">C</div>
+                        <div class="letter bordered">O</div>
+                        <div class="letter bordered">O</div>
+                        <div class="letter bordered">N</div>
+                    </div>
+                </div>
+                <div class="everything_everywhere_all_at_once">
+                    <h2>Everywhere</h2>
+                    <div class="letter_row">
+                        <div class="letter bordered">M</div>
+                        <div class="letter bordered highlight">I</div>
+                        <div class="letter bordered">L</div>
+                        <div class="letter bordered">K</div>
+                        <div class="letter bordered">Y</div>
+                        <div class="letter"></div>
+                        <div class="letter bordered">W</div>
+                        <div class="letter bordered">A</div>
+                        <div class="letter bordered">Y</div>
+                    </div>
+                    <div class="letter_row">
+                        <div class="letter bordered">E</div>
+                        <div class="letter bordered">A</div>
+                        <div class="letter bordered">R</div>
+                        <div class="letter bordered">T</div>
+                        <div class="letter bordered highlight">H</div>
+                    </div>
+                    <div class="letter_row">
+                        <div class="letter bordered">U</div>
+                        <div class="letter bordered highlight">S</div>
+                        <div class="letter bordered">A</div>
+                    </div>
+                    <div class="letter_row">
+                        <div class="letter bordered">L</div>
+                        <div class="letter bordered highlight">A</div>
+                        <div class="letter bordered">U</div>
+                        <div class="letter bordered">N</div>
+                        <div class="letter bordered">D</div>
+                        <div class="letter bordered">R</div>
+                        <div class="letter bordered">O</div>
+                        <div class="letter bordered">M</div>
+                        <div class="letter bordered">A</div>
+                        <div class="letter bordered">T</div>
+                    </div>
+                </div>
+                <div class="everything_everywhere_all_at_once">
+                    <h2>All At Once</h2>
+                <div class="letter_row">
+                        <div class="letter bordered">D</div>
+                        <div class="letter bordered">E</div>
+                        <div class="letter bordered">C</div>
+                        <div class="letter bordered highlight">A</div>
+                        <div class="letter bordered">D</div>
+                        <div class="letter bordered">E</div>
+                    </div>
+                    <div class="letter_row">
+                        <div class="letter bordered">F</div>
+                        <div class="letter bordered">O</div>
+                        <div class="letter bordered">R</div>
+                        <div class="letter bordered">T</div>
+                        <div class="letter bordered">N</div>
+                        <div class="letter bordered">I</div>
+                        <div class="letter bordered highlight">G</div>
+                        <div class="letter bordered">H</div>
+                        <div class="letter bordered">T</div>
+                    </div>
+                    <div class="letter_row">
+                        <div class="letter bordered highlight">H</div>
+                        <div class="letter bordered">O</div>
+                        <div class="letter bordered">U</div>
+                        <div class="letter bordered">R</div>
+                    </div>
+                    <div class="letter_row">
+                        <div class="letter bordered">S</div>
+                        <div class="letter bordered">E</div>
+                        <div class="letter bordered">C</div>
+                        <div class="letter bordered">O</div>
+                        <div class="letter bordered highlight">N</div>
+                        <div class="letter bordered">D</div>
+                    </div>
+                </div>
+                <p>Taking the indicated letters in the order of the transformations gives the answer <strong>HAVANA NIGHTS</strong>.</p>
+            </div>
+        </div>
+        <div class="puzzle">
+            <h3>The Fabelmans</h3>
+            <h4>Feeder Answers <button reveals="fabelmans_feeders">Show</button></h4>
+            <div class="spoiler" id="fabelmans_feeders">
+                <ul>
+                    <li>CROP</li>
+                    <li>DEFLECTION</li>
+                    <li>FAX</li>
+                    <li>FIRMER</li>
+                    <li>GROPES</li>
+                    <li>ROG</li>
+                    <li>VAPER</li>
+                    <li>WITCHER</li>
+                </ul>
+            </div>
+            <h4>Solution <button reveals="fabelmans_solution">Show</button></h4>
+            <div class="spoiler" id="fabelmans_solution">
+                <p>The answers can be paired off to form items in the title of an Aesop's fable that have exchanged a letter.  Take the letter that was changed in the answer and shift by the given amount.</p>
+                <table>
+                    <tr>
+                        <td>FIRMER</td>
+                        <td>VAPER</td>
+                        <td><a href="https://en.wikipedia.org/wiki/The_Farmer_and_the_Viper">The Farmer and the Viper</a></td>
+                        <td>A</td>
+                        <td>+2</td>
+                        <td><strong>C</strong></td>
+                        <td>I</td>
+                        <td>+3</td>
+                        <td><strong>L</strong></td>
+                    </tr>
+                    <tr>
+                        <td>ROG</td>
+                        <td>DEFLECTION</td>
+                        <td><a href="https://en.wikipedia.org/wiki/The_Dog_and_Its_Reflection">The Dog and Its Reflection</a></td>
+                        <td>D</td>
+                        <td>+1</td>
+                        <td><strong>E</strong></td>
+                        <td>R</td>
+                        <td>+0</td>
+                        <td><strong>R</strong></td>
+                    </tr>
+                    <tr>
+                        <td>CROP</td>
+                        <td>WITCHER</td>
+                        <td><a href="https://en.wikipedia.org/wiki/The_Crow_and_the_Pitcher">The Crow and the Pitcher</a></td>
+                        <td>W</td>
+                        <td>-12</td>
+                        <td><strong>K</strong></td>
+                        <td>P</td>
+                        <td>+3</td>
+                        <td><strong>S</strong></td>
+                    </tr>
+                    <tr>
+                        <td>FAX</td>
+                        <td>GROPES</td>
+                        <td><a href="https://en.wikipedia.org/wiki/The_Fox_and_the_Grapes">The Fox and the Grapes</a></td>
+                        <td>O</td>
+                        <td>-6</td>
+                        <td><strong>I</strong></td>
+                        <td>A</td>
+                        <td>+8</td>
+                        <td><strong>I</strong></td>
+                    </tr>
+                </table>
+                <p>Read across the rows to find the answer <strong>CLERKS II</strong>.</p>
+            </div>
+        </div>
+        <div class="puzzle">
+            <h3>The Oscars 2022</h3>
+            <h4>Solution <button reveals="oscar_solution">Show</button></h4>
+            <div class="spoiler" id="oscar_solution">
+            <p>Each answer is the title or subtitle of a sequel; take the number of years between the number of years between the release of that work and its predecessor and read as A=1, B=2, etc.  (As the introduction text indicates, you don't need to use exact release dates, just subtract the years of release.)</p>
+            <table>
+                <tr>
+                    <th>Puzzle</th>
+                    <th>Answer</th>
+                    <th>Year of Release</th>
+                    <th>Previous Installment</th>
+                    <th>Year of Release</th>
+                    <th>Difference</th>
+                    <th>Extracted Letter</th>
+                </tr>
+                <tr>
+                    <td>Tár</td>
+                    <td><a href="https://en.wikipedia.org/wiki/New_Pok%C3%A9mon_Snap">NEW POKÉMON SNAP</a></td>
+                    <td>2021</td>
+                    <td><a href="https://en.wikipedia.org/wiki/Pok%C3%A9mon_Snap"><em>Pokémon Snap</em></a></td>
+                    <td>1999</td>
+                    <td>22</td>
+                    <td>V</td>
+                </tr>
+                <tr>
+                    <td>Avatar: The Way of Water</td>
+                    <td><a href="https://en.wikipedia.org/wiki/Ultima_IX:_Ascension">ULTIMA IX</a></td>
+                    <td>1999</td>
+                    <td><a href="https://en.wikipedia.org/wiki/Ultima_VIII:_Pagan"><em>Ultima VIII: Pagan</em></a></td>
+                    <td>1994</td>
+                    <td>5</td>
+                    <td>E</td>
+                </tr>
+                <tr>
+                    <td>Triangle of Sadness</td>
+                    <td><a href="https://en.wikipedia.org/wiki/Tehanu">TEHANU</a></td>
+                    <td>1990</td>
+                    <td><a href="https://en.wikipedia.org/wiki/The_Farthest_Shore"><em>The Farthest Shore</em></a></td>
+                    <td>1972</td>
+                    <td>18</td>
+                    <td>R</td>
+                </tr>
+                <tr>
+                    <td>All Quiet on the Western Front</td>
+                    <td><a href="https://en.wikipedia.org/wiki/Kamp_Krustier">KAMP KRUSTIER</a></td>
+                    <td>2017</td>
+                    <td><a href="https://en.wikipedia.org/wiki/Kamp_Krusty">"Kamp Krusty"</a></td>
+                    <td>1992</td>
+                    <td>25</td>
+                    <td>Y</td>
+                </tr>
+                <tr>
+                    <td>The Banshees of Inisherin</td>
+                    <td><a href="https://en.wikipedia.org/wiki/Indiana_Jones_and_the_Dial_of_Destiny">THE DIAL OF DESTINY</a></td>
+                    <td>2023</td>
+                    <td><a href="https://en.wikipedia.org/wiki/Indiana_Jones_and_the_Kingdom_of_the_Crystal_Skull"><em>Indiana Jones and the Kingdom of the Crystal Skull</em></a></td>
+                    <td>2008</td>
+                    <td>15</td>
+                    <td>O</td>
+                </tr>
+                <tr>
+                    <td>Women Talking</td>
+                    <td><a href="https://en.wikipedia.org/wiki/Andy_Hardy_Comes_Home">ANDY HARDY COMES HOME</a></td>
+                    <td>1958</td>
+                    <td><a href="https://en.wikipedia.org/wiki/Love_Laughs_at_Andy_Hardy"><em>Love Laughs at Andy Hardy</em></a></td>
+                    <td>1946</td>
+                    <td>12</td>
+                    <td>L</td>
+                </tr>
+                <tr>
+                    <td>Top Gun: Maverick</td>
+                    <td><a href="https://en.wikipedia.org/wiki/Arrow_of_God">ARROW OF GOD</a></td>
+                    <td>1964</td>
+                    <td><a href="https://en.wikipedia.org/wiki/No_Longer_at_Ease"><em>No Longer At Ease</em></a>*</td>
+                    <td>1960</td>
+                    <td>4</td>
+                    <td>D</td>
+                </tr>
+                <tr>
+                    <td>Elvis</td>
+                    <td><a href="https://en.wikipedia.org/wiki/Texasville">TEXASVILLE</a></td>
+                    <td>1990</td>
+                    <td><a href="https://en.wikipedia.org/wiki/The_Last_Picture_Show"><em>The Last Picture Show</em></a>**</td>
+                    <td>1971</td>
+                    <td>19</td>
+                    <td>S</td>
+                </tr>
+                <tr>
+                    <td>Everything Everywhere All at Once</td>
+                    <td><a href="https://en.wikipedia.org/wiki/Dirty_Dancing:_Havana_Nights">HAVANA NIGHTS</a></td>
+                    <td>2004</td>
+                    <td><a href="https://en.wikipedia.org/wiki/Dirty_Dancing"><em>Dirty Dancing</em></a></td>
+                    <td>1987</td>
+                    <td>17</td>
+                    <td>Q</td>
+                </tr>
+                <tr>
+                    <td>The Fabelmans</td>
+                    <td><a href="https://en.wikipedia.org/wiki/Clerks_II">CLERKS II</a></td>
+                    <td>2006</td>
+                    <td><a href="https://en.wikipedia.org/wiki/Clerks_(film)"><em>Clerks</em></a></td>
+                    <td>1994</td>
+                    <td>12</td>
+                    <td>L</td>
+                </tr>
+            </table>
+            <p>* I didn't realize until just before publishing that despite being referred to as the "Africa Trilogy" <em>Arrow of God</em> is not a direct sequel to <em>Things Fall Apart</em> and <em>No Longer at Ease</em> but rather a continuation of the setting and themes.</p>
+            <p>** This is specifically referring to the films; the Larry McMurtry novels were published in 1987 and 1966, respectively.  I hope this didn't mislead any teams; in my defense, the movies seem to be more notable than the books (by which I mean the movies have Wikipedia pages and the books don't).</p>
+            <p>The final answer, VERY OLD SQL, alludes not just to the mechanic but also the presence of <em>Avatar: The Way of Water</em> (13 years) and <em>Top Gun: Maverick</em> (36 years) among this year's Best Picture nominees.</p>
+            <p>I had a lot of fun brainstorming answers for this meta (helped along by TV Tropes <a href="https://tvtropes.org/pmwiki/pmwiki.php/Main/SequelGap">Sequel Gap</a> article, and not helped at all by various clickbait-y articles that come up when you try to Google "longest time between sequels" and similar).  I tried to cover a variety of different types of media and time periods; my big regrets are that <a href="https://en.wikipedia.org/wiki/Adventures_of_Huckleberry_Finn"><em>Adventures of Huckleberry Finn</em></a>, John Updike's <a href="https://en.wikipedia.org/wiki/Rabbit,_Run">Rabbit novels</a>, and Meat Loaf's <a href="https://en.wikipedia.org/wiki/Bat_Out_of_Hell"><em>Bat Out of Hell</em></a> albums didn't extract to any of the letters I needed.  I hope everyone had as much fun solving these as I did writing them!</p>
+        </div>
+        <p><a href="http://puzzles.jackbrounstein.com/puzzle/39">Back</a></p>
+    </body>
+</html>
