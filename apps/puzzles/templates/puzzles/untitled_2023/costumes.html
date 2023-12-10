@@ -1,0 +1,11 @@
+{% load static %}
+{% load puzzle_template_filters %}
+<p class="flavor">I weally like your "Piet Mondrian could only afford one color of paint" costume.</p>
+
+<div class="crossword_grid_container">
+    <img src="{% static 'puzzles/untitled_2023/costumes/costumes_grid.png' %}">
+</div>
+
+{% for i in 1|range:60 %}
+    <a href="{% static 'puzzles/untitled_2023/costumes/'|add:i|add:'.png' %}"><img src="{% static 'puzzles/untitled_2023/costumes/'|add:i|add:'.png' %}" height="100"></a>
+{% endfor %}
